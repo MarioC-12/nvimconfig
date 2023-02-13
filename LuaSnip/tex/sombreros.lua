@@ -61,10 +61,10 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="(%w+)hat", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP sombrero"},
+    s({trig="(%w+)bar", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP bar"},
         fmta(
             [[ 
-            \hat{<>}
+            \overline{<>}
             ]],
             {
                 f( function(_, snip) return snip.captures[1] end )
@@ -83,10 +83,10 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="(%w+)bar", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP bar"},
+    s({trig="(%w+)vet", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP vet"},
         fmta(
             [[ 
-            \overline{<>}
+            \overrightarrow{<>}
             ]],
             {
                 f( function(_, snip) return snip.captures[1] end )
@@ -94,10 +94,10 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="(%w+)vet", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP vet"},
+    s({trig="(%w+)hat", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP sombrero"},
         fmta(
             [[ 
-            \overrightarrow{<>}
+            \hat{<>}
             ]],
             {
                 f( function(_, snip) return snip.captures[1] end )
