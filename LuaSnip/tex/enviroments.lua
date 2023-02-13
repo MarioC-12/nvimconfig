@@ -196,9 +196,9 @@ return
     s({trig="dem", dscr="Proof"},
         fmta(
             [[ 
-            \begin{dem}
+            \begin{demo}
                 <>
-            \end{dem}
+            \end{demo}
             ]],
             {
                 d(1, get_visual),

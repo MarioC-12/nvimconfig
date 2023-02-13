@@ -7,7 +7,7 @@ end
 return
 {
     -- Various simple delimiters
-    s({trig="lr(", snippetType="autosnippet", dscr="Parenthesis"},
+    s({trig="lr(", snippetType="autosnippet", wordTrig=false, dscr="Parenthesis"},
         fmta(
             [[ 
             \left( <> \right)
@@ -18,7 +18,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr", dscr="Parenthesis slow"},
+    s({trig="lr", dwordTrig=false, scr="Parenthesis slow"},
         fmta(
             [[ 
             \left( <> \right)
@@ -29,7 +29,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr[", snippetType="autosnippet", dscr="Brackets"},
+    s({trig="lr[", snippetType="autosnippet", wordTrig=false, dscr="Brackets"},
         fmta(
             [[ 
             \left[ <> \right]
@@ -40,7 +40,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr{", snippetType="autosnippet", dscr="Set"},
+    s({trig="lr{", snippetType="autosnippet", wordTrig=false, dscr="Set"},
         fmta(
             [[ 
             \left{ <> \right}
@@ -51,7 +51,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr|", snippetType="autosnippet", dscr="Cardinal"},
+    s({trig="lr|", snippetType="autosnippet", wordTrig=false, dscr="Cardinal"},
         fmta(
             [[ 
             \leftvert <> \rightvert
@@ -62,7 +62,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lra", snippetType="autosnippet", dscr="Angles"},
+    s({trig="lra", snippetType="autosnippet", wordTrig=false, dscr="Angles"},
         fmta(
             [[ 
             \langle <> \rangle
@@ -73,7 +73,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="norm", snippetType="autosnippet", dscr="Norm"},
+    s({trig="norm", snippetType="autosnippet", wordTrig=false, dscr="Norm"},
         fmta(
             [[ 
             \lVer <> \rVert
@@ -84,7 +84,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="ceil", snippetType="autosnippet", dscr="Ceil"},
+    s({trig="ceil", snippetType="autosnippet", wordTrig=false, dscr="Ceil"},
         fmta(
             [[ 
             \left\lceil <> \right\rceil
@@ -95,18 +95,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="floor", snippetType="autosnippet", dscr="Floor"},
-        fmta(
-            [[ 
-            \left\lfloor <> \right\rfloor
-            ]],
-            {
-                d(1, get_visual),
-            }
-        ),
-        {condition = in_mathzone}
-    ),
-    s({trig="floor", snippetType="autosnippet", dscr="Floor"},
+    s({trig="floor", snippetType="autosnippet", wordTrig=false, dscr="Floor"},
         fmta(
             [[ 
             \left\lfloor <> \right\rfloor
@@ -118,7 +107,7 @@ return
         {condition = in_mathzone}
     ),
     -- MATRIXES
-    s({trig="pmat", snippetType="autosnippet", dscr="Parenthesis matrix"},
+    s({trig="pmat", snippetType="autosnippet", wordTrig=false, dscr="Parenthesis matrix"},
         fmta(
             [[ 
             \begin{pmatrix} <> \end{pmatrix}
@@ -129,7 +118,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="vmat", snippetType="autosnippet", dscr="Vertical matrix"},
+    s({trig="vmat", snippetType="autosnippet", wordTrig=false, dscr="Vertical matrix"},
         fmta(
             [[ 
             \begin{vmatrix} <> \end{vmatrix}
@@ -140,7 +129,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="bmat", snippetType="autosnippet", dscr="Brackets matrix"},
+    s({trig="bmat", snippetType="autosnippet", wordTrig=false, dscr="Brackets matrix"},
         fmta(
             [[ 
             \begin{bmatrix} <> \end{bmatrix}
@@ -151,7 +140,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="cvec", snippetType="autosnippet", dscr="Column vector"},
+    s({trig="cvec", snippetType="autosnippet", wordTrig=false, dscr="Column vector"},
         fmta(
             [[ 
             \begin{pmatrix} <> \end{pmatrix}

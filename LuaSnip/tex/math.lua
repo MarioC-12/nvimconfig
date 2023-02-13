@@ -86,15 +86,19 @@ return
         {t("\\simeq")},
         {condition = in_mathzone}
     ),
-    s({trig="sr", snippetType="autosnippet", dscr="Square"},
+    s({trig="||", snippetType="autosnippet", dscr="Pipe"},
+        {t("\\mid")},
+        {condition = in_mathzone}
+    ),
+    s({trig="sr", snippetType="autosnippet", wordTrig=false, dscr="Square"},
         {t("^2")},
         {condition = in_mathzone}
     ),
-    s({trig="cb", snippetType="autosnippet", dscr="Cube"},
+    s({trig="cb", snippetType="autosnippet", wordTrig=false, dscr="Cube"},
         {t("^3")},
         {condition = in_mathzone}
     ),
-    s({trig="invs", snippetType="autosnippet", dscr="Inverse"},
+    s({trig="invs", snippetType="autosnippet", wordTrig=false, dscr="Inverse"},
         {t("^{-1}")},
         {condition = in_mathzone}
     ),
@@ -114,7 +118,7 @@ return
         {t("\\times")},
         {condition = in_mathzone}
     ),
-    s({trig="\\\\\\", snippetType="autosnippet", dscr="Set minus"},
+    s({trig="\\\\\\", snippetType="autosnippet", wordTrig=false, dscr="Set minus"},
         {t("\\setminus")},
         {condition = in_mathzone}
     ),
@@ -126,7 +130,7 @@ return
         {t("\\cdot")},
         {condition = in_mathzone}
     ),
-    s({trig="td", snippetType="autosnippet", dscr="To the power"},
+    s({trig="td", snippetType="autosnippet", wordTrig=false, dscr="To the power"},
         fmta(
             [[ 
             ^{<>}
@@ -137,7 +141,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="__", snippetType="autosnippet", dscr="Subscript"},
+    s({trig="__", snippetType="autosnippet", wordTrig=false, dscr="Subscript"},
         fmta(
             [[ 
             _{<>}
@@ -249,7 +253,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lim", snippetType="autosnippet", dscr="Summation"},
+    s({trig="lim", dscr="Limit"},
         fmta(
             [[ 
             \lim_{<> \rightarrow <>} 
@@ -257,6 +261,42 @@ return
             {
                 i(1, "n"),
                 i(2, "\\infty"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="limsup", dscr="Limit superior"},
+        fmta(
+            [[ 
+            \limsup_{<> \rightarrow <>} 
+            ]],
+            {
+                i(1, "n"),
+                i(2, "\\infty"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="liminf", dscr="Limit inferior"},
+        fmta(
+            [[ 
+            \liminf_{<> \rightarrow <>} 
+            ]],
+            {
+                i(1, "n"),
+                i(2, "\\infty"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="suc", snippetType="autosnippet", dscr="Sucession"},
+        fmta(
+            [[ 
+            \{<>\}_{<>=1}^{\infty}
+            ]],
+            {
+                i(1),
+                i(2, "n")
             }
         ),
         {condition = in_mathzone}
