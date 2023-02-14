@@ -157,9 +157,9 @@ return
     s({trig="def", dscr="Definition"},
         fmta(
             [[ 
-            \begin{def}
+            \begin{defi}
                 <>
-            \end{def}
+            \end{defi}
             ]],
             {
                 d(1, get_visual),
@@ -293,6 +293,25 @@ return
             ]],
             {
                 i(1),
+            }
+        ),
+        {condition = line_begin}
+    ),
+    s({trig="fig", snippetType="autosnippet", dscr="Figure"},
+        fmta(
+            [[ 
+            \begin{figure}[<>]
+                \centering
+                <>
+                \caption{<>}
+                \label{<>}
+            \end{figure}
+            ]],
+            {
+                i(1, "htpb"),
+                i(2),
+                i(3),
+                i(4)
             }
         ),
         {condition = line_begin}

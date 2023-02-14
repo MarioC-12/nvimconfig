@@ -40,7 +40,7 @@ return
     s({trig="unb", snippetType="autosnippet", dscr="Underbrace"},
         fmta(
             [[ 
-            \Underbrace{<>}_{<>}
+            \underbrace{<>}_{<>}
             ]],
             {
                 d(1, get_visual),
@@ -64,7 +64,7 @@ return
     s({trig="stack", snippetType="autosnippet", dscr="Stack relative"},
         fmta(
             [[ 
-            \stackrel{<>}^{<>}
+            \stackrel{<>}{<>}
             ]],
             {
                 i(1),

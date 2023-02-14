@@ -18,7 +18,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr", dwordTrig=false, scr="Parenthesis slow"},
+    s({trig="lr", wordTrig=false, dscr="Parenthesis slow"},
         fmta(
             [[ 
             \left( <> \right)

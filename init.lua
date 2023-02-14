@@ -548,6 +548,11 @@ vim.cmd[[
   inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 ]]
 
+-- Setup inkscape-figures
+vim.cmd[[
+  inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+  nnoremap <C-i> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+]]
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
