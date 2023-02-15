@@ -18,6 +18,22 @@ return
         {t("\\subset")},
         {condition = in_mathzone}
     ),
+    s({trig="Nn", snippetType="autosnippet", dscr="Cap"},
+        {t("\\cap")},
+        {condition = in_mathzone}
+    ),
+    s({trig="UU", snippetType="autosnippet", dscr="Cup"},
+        {t("\\cup")},
+        {condition = in_mathzone}
+    ),
+    s({trig="suU", snippetType="autosnippet", dscr="Square Cup"},
+        {t("\\sqcup")},
+        {condition = in_mathzone}
+    ),
+    s({trig="OO", snippetType="autosnippet", dscr="Empty set"},
+        {t("\\emptyset")},
+        {condition = in_mathzone}
+    ),
     s({trig="dc", snippetType="autosnippet", dscr="Supset"},
         {t("\\supset")},
         {condition = in_mathzone}
@@ -130,6 +146,39 @@ return
         {t("\\cdot")},
         {condition = in_mathzone}
     ),
+    s({trig="nnn", snippetType="autosnippet", dscr="Big cap"},
+        fmta(
+            [[ 
+            \bigcap_{<>}
+            ]],
+            {
+                i(1, "i \\in I"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="uuu", snippetType="autosnippet", dscr="Big cup"},
+        fmta(
+            [[ 
+            \bigcup_{<>}
+            ]],
+            {
+                i(1, "i \\in I"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="sUuu", snippetType="autosnippet", dscr="Big square cup"},
+        fmta(
+            [[ 
+            \bigsqcup_{<>}
+            ]],
+            {
+                i(1, "i \\in I"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="td", snippetType="autosnippet", wordTrig=false, dscr="To the power"},
         fmta(
             [[ 
@@ -147,7 +196,20 @@ return
             _{<>}
             ]],
             {
-                i(1),
+                d(1, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="case", snippetType="autosnippet", dscr="Cases"},
+        fmta(
+            [[ 
+            \begin{cases}
+                <>
+            \end{cases}
+            ]],
+            {
+                d(1, get_visual),
             }
         ),
         {condition = in_mathzone}
