@@ -37,20 +37,26 @@ return
             \begin{figure}[H]
                 \centering
                     \begin{tikzpicture}[node distance=2cm, auto]
-                    \node(X) {$X$};
-                    \node(Y) [right of=X] {$Y$};
-                    \node(Z) [below of=X] {$Z$};
-                    \draw[->](X) to node {$f$}(Y);
-                    \draw[->](X) to node [left] {$g$}(Z);
-                    \draw[->](Z) to node [below=0.5ex] {$h$}(Y);
+                    \node(*+) {$*+$};
+                    \node(*+) [right of=*+] {$*+$};
+                    \node(*+) [below of=*+] {$*+$};
+                    \draw[->](*+) to node {$*+$}(*+);
+                    \draw[->](*+) to node [left] {$*+$}(*+);
+                    \draw[->](*+) to node [below] {$*+$}(*+);
                     \end{tikzpicture}
                 \caption{*+}
                 \label{*+}
             \end{figure}
             ]],
             {
-                i(1),
-                i(2)
+                i(1, "X"), rep(1),
+                i(2, "Y"), rep(1), rep(2),
+                i(3, "Z"), rep(1), rep(2),
+                rep(1), i(4, "f"), rep(2),
+                rep(1), i(5, "g"), rep(3),
+                rep(3), i(6, "f \\circ g"), rep(2),
+                i(7),
+                rep(7, "fig:")
             },
             { delimiters = '*+' }
         )
