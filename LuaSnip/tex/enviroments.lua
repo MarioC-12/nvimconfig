@@ -284,6 +284,32 @@ return
         ),
         {condition = line_begin}
     ),
+    s({trig="enun", dscr="Enunciado"},
+        fmta(
+            [[ 
+            \begin{enun}
+                <>
+            \end{enun}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = line_begin}
+    ),
+    s({trig="sol", dscr="Solución"},
+        fmta(
+            [[ 
+            \begin{sol}
+                <>
+            \end{sol}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = line_begin}
+    ),
     s({trig="listing", snippetType="autosnippet", dscr="Code listing"},
         fmta(
             [[ 
