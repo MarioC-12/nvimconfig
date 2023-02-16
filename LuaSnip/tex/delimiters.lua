@@ -43,7 +43,7 @@ return
     s({trig="lr{", snippetType="autosnippet", wordTrig=false, dscr="Set"},
         fmta(
             [[ 
-            \left{ <> \right}
+            \left\{ <> \right\}
             ]],
             {
                 d(1, get_visual),

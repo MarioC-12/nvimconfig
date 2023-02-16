@@ -39,7 +39,7 @@ return
         {condition = in_mathzone}
     ),
     s({trig="EE", snippetType="autosnippet", dscr="Exists"},
-        {t("\\exits")},
+        {t("\\exists")},
         {condition = in_mathzone}
     ),
     s({trig="AA", snippetType="autosnippet", dscr="For all"},
