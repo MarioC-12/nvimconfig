@@ -57,7 +57,7 @@ return
     s({trig="cha", snippetType="autosnippet", dscr="Chapter"},
         fmta(
             [[ 
-            \chapter{<>},
+            \chapter{<>}
             \label{cha:<>}
             ]],
             {
@@ -70,7 +70,7 @@ return
     s({trig="sec", snippetType="autosnippet", dscr="Section"},
         fmta(
             [[ 
-            \section{<>},
+            \section{<>}
             \label{sec:<>}
             ]],
             {
@@ -83,7 +83,7 @@ return
     s({trig="sub", snippetType="autosnippet", dscr="Subsection"},
         fmta(
             [[ 
-            \subsection{<>},
+            \subsection{<>}
             \label{sub:<>}
             ]],
             {
@@ -334,7 +334,28 @@ return
             \end{figure}
             ]],
             {
-                i(1, "htpb"),
+                i(1, "H"),
+                i(2),
+                i(3),
+                i(4)
+            }
+        ),
+        {condition = line_begin}
+    ),
+    s({trig="tikz", snippetType="autosnippet", dscr="Tikz picture"},
+        fmta(
+            [[ 
+            \begin{figure}[<>]
+                \centering
+                \begin{tikzpicture}
+                    <>
+                \end{tikzpicture}
+                \caption{<>}
+                \label{<>}
+            \end{figure}
+            ]],
+            {
+                i(1, "H"),
                 i(2),
                 i(3),
                 i(4)
