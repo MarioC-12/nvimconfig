@@ -128,6 +128,18 @@ return
             }
         )
     ),
+    s({trig="dm", snippetType="autosnippet", dscr="Math mode old"},
+        fmta(
+            [[ 
+            $$
+            <>
+            $$
+            ]],
+            {
+                d(1, get_visual),
+            }
+        )
+    ),
     s({trig="ali", dscr="Align mode"},
         fmta(
             [[ 

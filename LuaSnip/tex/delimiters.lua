@@ -54,7 +54,7 @@ return
     s({trig="lr|", snippetType="autosnippet", wordTrig=false, dscr="Cardinal"},
         fmta(
             [[ 
-            \leftvert <> \rightvert
+            \lvert <> \rvert
             ]],
             {
                 d(1, get_visual),
@@ -76,7 +76,7 @@ return
     s({trig="norm", snippetType="autosnippet", wordTrig=false, dscr="Norm"},
         fmta(
             [[ 
-            \lVer <> \rVert
+            \lVert <> \rVert
             ]],
             {
                 d(1, get_visual),
