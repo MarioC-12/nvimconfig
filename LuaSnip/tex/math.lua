@@ -375,10 +375,34 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="fakt", snippetType="autosnippet", dscr="Quotient"},
+        fmta(
+            [[ 
+            \faktor{<>}{<>}
+            ]],
+            {
+                d(1, get_visual),
+                i(2)
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="(%d+)/", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP fractions"},
         fmta(
             [[ 
             \frac{<>}{<>}
+            ]],
+            {
+                f( function(_, snip) return snip.captures[1] end ),
+                i(1)
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="(%d+)¬", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="OP quotient"},
+        fmta(
+            [[ 
+            \faktor{<>}{<>}
             ]],
             {
                 f( function(_, snip) return snip.captures[1] end ),
