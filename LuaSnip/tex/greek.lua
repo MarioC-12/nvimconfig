@@ -100,7 +100,7 @@ return
       t("\\Xi"),
     },
     {condition = in_mathzone}),
-    s({trig="pi", snippetType="autosnippet"},
+    s({trig=";i", snippetType="autosnippet"},
     {
       t("\\pi"),
     },
