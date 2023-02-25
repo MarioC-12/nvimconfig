@@ -49,7 +49,7 @@ vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe 
 vim.o.completeopt = 'menuone,noselect'
 
 -- Language
-vim.o.spelllang = "es"
+vim.o.spelllang = "es,en_gb"
 
 -- Colorcolumn
 vim.o.colorcolumn = "80"
