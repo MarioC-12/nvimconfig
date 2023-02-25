@@ -1,3 +1,4 @@
+-- Most remaps come from The Primeagen (https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/remap.lua)
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 --  NOTE: Must happen before plugins are required 
@@ -17,6 +18,15 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'",
     { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'",
     { expr = true, silent = true })
+
+-- Next line to end line 
+vim.keymap.set('n', 'J', "mzJ`z")
+
+-- Maintaining the center
+vim.keymap.set('n', '<C-d>', "<C-d>zz")
+vim.keymap.set('n', '<C-u>', "<C-d>zz")
+vim.keymap.set('n', 'n', "nzzzv")
+vim.keymap.set('n', 'N', "Nzzzv")
 
 -- Move between windows
 vim.keymap.set('n', '<C-j>', "<C-W>j", { })
@@ -38,6 +48,10 @@ vim.keymap.set('n', '<leader>Y', [["+Y]])
 -- Remove without copying 
 vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
 
+-- Sustitute current word (and all equal)
+vim.keymap.set("n", "<leader>v", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Autocorrect
 vim.keymap.set('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 
 --Inkscape-figures
