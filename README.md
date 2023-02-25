@@ -1,4 +1,4 @@
-# NVIM DOTFILE
+# NEOVIM DOTFILE
 This repository contains my neovim configuration. 
 
 It includes LSP support, multiple LuaSnip snippets and more plugins.
