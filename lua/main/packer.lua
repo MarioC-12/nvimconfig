@@ -31,9 +31,7 @@ require('packer').startup(function(use)
     requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   }
 
-  use {
-    'L3MON4D3/LuaSnip',
-  }
+  use { 'L3MON4D3/LuaSnip' }
 
   use { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -71,6 +69,7 @@ require('packer').startup(function(use)
   -- Misc
   use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
   use { 'tpope/vim-surround' }
+  use { 'ggandor/lightspeed.nvim' }
   --use { 'jiangmiao/auto-pairs' }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
