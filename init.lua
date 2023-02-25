@@ -115,8 +115,8 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.hlsearch = true
 
 -- Make line numbers default
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- Keep cursor centered
 vim.o.so = 7
@@ -520,14 +520,14 @@ cmp.setup {
 }
 
 -- Setup snippets
-vim.cmd[[
-" imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
-imap <silent><expr> <C-j> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<C-j>'
-smap <silent><expr> <C-j> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<C-j>'
-
-imap <silent><expr> <C-k> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<C-k>'
-smap <silent><expr> <C-k> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<C-k>'
-]]
+-- Map forward jump
+vim.keymap.set({ 'i', 's' }, '<C-j>', function ()
+  return luasnip.jumpable(1) and '<Plug>luasnip-jump-next' or '<C-j>'
+end, { silent = true, expr = true })
+-- Map backward jump
+vim.keymap.set({ 'i', 's' }, '<C-k>', function ()
+  return luasnip.jumpable(-1) and '<Plug>luasnip-jump-next' or '<C-k>'
+end, { silent = true, expr = true })
 
 require("luasnip").config.set_config({
   enable_autosnippets = true,
@@ -537,12 +537,18 @@ require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
 
 
 -- Setup autocorrector
-vim.cmd[[
-  autocmd BufRead,BufNewFile *.tex setlocal spell
-  autocmd BufRead,BufNewFile *.md setlocal spell
-  set spelllang=es 
-  inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-]]
+--vim.cmd[[
+--  autocmd BufRead,BufNewFile *.tex setlocal spell
+--  autocmd BufRead,BufNewFile *.md setlocal spell
+--  "set spelllang=es 
+--  "inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+--]]
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = { '*.tex', '*.md' },
+  command = 'setlocal spell'
+})
+vim.o.spelllang = "es"
+vim.keymap.set('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 
 -- Setup inkscape-figures
 vim.cmd[[
