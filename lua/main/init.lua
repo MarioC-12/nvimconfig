@@ -1,6 +1,6 @@
+require("main.packer")
 require("main.set")
 require("main.remap")
-require("main.packer")
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

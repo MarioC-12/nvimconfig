@@ -11,3 +11,6 @@ folder.
 
 To execute it, you will probably first need to give it the necessary permissions. 
 For that, simply execute `chmod +x install.sh`.
+
+### Recommended dependencies
+· [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
