@@ -1,5 +1,5 @@
 # NVIM DOTFILE
-This repository contains my nvim dotfile. 
+This repository contains my neovim configuration. 
 
 It includes LSP support, multiple LuaSnip snippets and more plugins.
 
@@ -12,5 +12,10 @@ folder.
 To execute it, you will probably first need to give it the necessary permissions. 
 For that, simply execute `chmod +x install.sh`.
 
+The first time you open `nvim` there will probably be a lot of errors. Do not worry,
+skip them and Packer will install the plugins so the next time all the errors 
+will be gone.
+
 ### Recommended dependencies
-· [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+· [ripgrep](https://github.com/BurntSushi/ripgrep#installation). To use all the
+features for Telescope.
