@@ -142,8 +142,12 @@ return
         {t("\\circ")},
         {condition = in_mathzone}
     ),
-    s({trig="**", snippetType="autosnippet", dscr="Dots"},
+    s({trig="**", snippetType="autosnippet", dscr="Product Dot"},
         {t("\\cdot")},
+        {condition = in_mathzone}
+    ),
+    s({trig="...", snippetType="autosnippet", dscr="Dots"},
+        {t("\\ldots")},
         {condition = in_mathzone}
     ),
     s({trig="nnn", snippetType="autosnippet", dscr="Big cap"},
