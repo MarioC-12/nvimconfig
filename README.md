@@ -17,8 +17,8 @@ skip them and Packer will install the plugins so the next time all the errors
 will be gone.
 
 ### Recommended dependencies
-· [ripgrep](https://github.com/BurntSushi/ripgrep#installation). To use all the
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation). To use all the
 features for Telescope.
-· [inkscape](https://inkscape.org/). To draw the diagrams to then insert in Latex.
-· [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
+- [inkscape](https://inkscape.org/). To draw the diagrams to then insert in Latex.
+- [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
 integration with inkscape.
