@@ -19,6 +19,6 @@ will be gone.
 ### Recommended dependencies
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation). To use all the
 features for Telescope.
-- [inkscape](https://inkscape.org/). To draw the diagrams to then insert in Latex.
+- [inkscape](https://inkscape.org/). To draw the Latex diagrams.
 - [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
 integration with inkscape.
