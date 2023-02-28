@@ -45,6 +45,15 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
+  -- Debugger
+  use { 'mfussenegger/nvim-dap',
+    requires = {
+      'theHamsta/nvim-dap-virtual-text',
+      'nvim-telescope/telescope-dap.nvim',
+      'rcarriga/nvim-dap-ui'
+    }
+  }
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
