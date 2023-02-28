@@ -102,6 +102,10 @@ return
         {t("\\simeq")},
         {condition = in_mathzone}
     ),
+    s({trig="homeo", snippetType="autosnippet", dscr="Isomorphism"},
+        {t("\\approx")},
+        {condition = in_mathzone}
+    ),
     s({trig="||", snippetType="autosnippet", dscr="Pipe"},
         {t("\\mid")},
         {condition = in_mathzone}
