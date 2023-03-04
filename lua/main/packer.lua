@@ -79,7 +79,7 @@ require('packer').startup(function(use)
   use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
   use { 'tpope/vim-surround' }
   use { 'ggandor/lightspeed.nvim' }
-  --use { 'jiangmiao/auto-pairs' }
+  use { 'windwp/nvim-autopairs' }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
