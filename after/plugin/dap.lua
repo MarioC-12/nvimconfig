@@ -37,12 +37,43 @@ dap.configurations.cpp = {
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
     runInTerminal = true,
-    console = "integratedTerminal"
+    console = "integratedTerminal",
+    stdio = nil,
   },
 }
 
-dap.configurations.c = dap.configurations.cpp
-dap.configurations.rust = dap.configurations.cpp
+dap.configurations.c = {
+  {
+    name = "C Debug and Run",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      -- First, check if exists CMakeLists.txt
+      local cwd = vim.fn.getcwd()
+      if require('utils.file').exists(cwd, "CMakeLists.txt") then
+        -- Then invoke cmake commands
+        -- Then ask user to provide execute file
+        return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+      else
+        local fileName = vim.fn.expand("%:t:r")
+        -- create this directory
+        os.execute("mkdir -p " .. "bin")
+        local cmd = "!gcc -g % -o bin/" .. fileName
+        -- First, compile it
+        vim.cmd(cmd)
+        -- Then, return it
+        return "${fileDirname}/bin/" .. fileName
+      end
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    runInTerminal = true,
+    console = "integratedTerminal",
+    stdio = nil
+  },
+}
+
+-- dap.configurations.rust = dap.configurations.cpp
 
 require('nvim-dap-virtual-text').setup{}
 require('dapui').setup()

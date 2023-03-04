@@ -54,6 +54,12 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Rust 
+  use {
+      'simrat39/rust-tools.nvim',
+      requires = { 'nvim-lua/plenary.nvim' }
+  }
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
