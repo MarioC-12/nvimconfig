@@ -22,5 +22,3 @@ features for Telescope.
 - [inkscape](https://inkscape.org/). To draw the Latex diagrams.
 - [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
 integration with inkscape.
-- [codelldb](https://github.com/vadimcn/vscode-lldb). This extension should be 
-installed through Visual Studio Code to use the rust-tools debugger.

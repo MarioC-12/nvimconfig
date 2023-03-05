@@ -1,7 +1,9 @@
 -- Update this path
-local extension_path = vim.env.HOME .. '/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/'
-local codelldb_path = extension_path .. 'adapter/codelldb'
-local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'  -- MacOS: This may be .dylib
+local mason_registry = require('mason-registry')
+local codelldb = mason_registry.get_package('codelldb')
+local extension_path = codelldb:get_install_path()
+local codelldb_path = extension_path .. '/codelldb'
+local liblldb_path = extension_path .. '/lldb/lib/liblldb.so'
 
 local rt = require("rust-tools")
 
