@@ -74,6 +74,7 @@ dap.configurations.c = {
 }
 
 dap.configurations.rust = {
+  {
     name = "Rust Debug and Run",
     type = "codelldb", -- matches the adapter
     request = "launch", -- could also attach to a currently running process
@@ -84,6 +85,7 @@ dap.configurations.rust = {
     stopOnEntry = false,
     args = {},
     runInTerminal = false,
+  },
 }
 
 require('nvim-dap-virtual-text').setup{}
