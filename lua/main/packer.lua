@@ -87,6 +87,7 @@ require('packer').startup(function(use)
   use { 'tpope/vim-surround' }
   use { 'ggandor/lightspeed.nvim' }
   use { 'windwp/nvim-autopairs' }
+  use { 'akinsho/toggleterm.nvim' }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')

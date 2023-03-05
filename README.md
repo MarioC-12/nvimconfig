@@ -22,3 +22,4 @@ features for Telescope.
 - [inkscape](https://inkscape.org/). To draw the Latex diagrams.
 - [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
 integration with inkscape.
+- [nushell](https://www.nushell.sh/). The shell that I have set is this one.
