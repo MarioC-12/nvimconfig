@@ -48,9 +48,10 @@ require('packer').startup(function(use)
   -- Debugger
   use { 'mfussenegger/nvim-dap',
     requires = {
+      'jay-babu/mason-nvim-dap.nvim',
       'theHamsta/nvim-dap-virtual-text',
       'nvim-telescope/telescope-dap.nvim',
-      'rcarriga/nvim-dap-ui'
+      'rcarriga/nvim-dap-ui',
     }
   }
 

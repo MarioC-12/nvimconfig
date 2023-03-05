@@ -6,10 +6,6 @@ local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'  -- MacOS: This may
 local rt = require("rust-tools")
 
 rt.setup({
-  dap = {
-    adapter = require('rust-tools.dap').get_codelldb_adapter(
-        codelldb_path, liblldb_path)
-  },
   server = {
     on_attach = function(_, bufnr)
       -- Hover actions

@@ -1,13 +1,13 @@
 local dap = require('dap')
+
+local mason_registry = require('mason-registry')
+local codelldb = mason_registry.get_package('codelldb')
 dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
   executable = {
-    command = '/usr/bin/codelldb',
+    command = codelldb:get_install_path().."/codelldb",
     args = {"--port", "${port}"},
-
-    -- On windows you may have to uncomment this:
-    -- detached = false,
   }
 }
 
@@ -73,7 +73,18 @@ dap.configurations.c = {
   },
 }
 
--- dap.configurations.rust = dap.configurations.cpp
+dap.configurations.rust = {
+    name = "Rust Debug and Run",
+    type = "codelldb", -- matches the adapter
+    request = "launch", -- could also attach to a currently running process
+    program = function()
+        return vim.fn.input( "Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+    args = {},
+    runInTerminal = false,
+}
 
 require('nvim-dap-virtual-text').setup{}
 require('dapui').setup()
