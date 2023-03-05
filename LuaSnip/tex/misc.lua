@@ -11,15 +11,15 @@ return
         {condition = in_mathzone}
     ),
     s({trig="ab", snippetType="autosnippet", dscr="Abierto"},
-        {t("\\text{ab.}")},
+        {t("\\ab")},
         {condition = in_mathzone}
     ),
     s({trig="cerr", snippetType="autosnippet", dscr="Cerrado"},
-        {t("\\text{cerr.}")},
+        {t("\\cerr")},
         {condition = in_mathzone}
     ),
     s({trig="conx", snippetType="autosnippet", dscr="Conexo"},
-        {t("\\text{conx.}")},
+        {t("\\conx")},
         {condition = in_mathzone}
     ),
     s({trig="mas", snippetType="autosnippet", dscr="Muestra aleatoria simple"},
