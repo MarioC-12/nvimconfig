@@ -2,7 +2,6 @@
 local mason_registry = require('mason-registry')
 local codelldb = mason_registry.get_package('codelldb')
 local extension_path = codelldb:get_install_path()
-print(extension_path)
 local codelldb_path = extension_path .. '/codelldb'
 local liblldb_path = extension_path .. '/extension/lldb/lib/liblldb.so'
 
