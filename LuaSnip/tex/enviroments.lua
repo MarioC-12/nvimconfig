@@ -58,11 +58,9 @@ return
         fmta(
             [[ 
             \chapter{<>}
-            \label{cha:<>}
             ]],
             {
                 d(1, get_visual),
-                rep(1)
             }
         ),
         {condition = line_begin}
@@ -71,11 +69,9 @@ return
         fmta(
             [[ 
             \section{<>}
-            \label{sec:<>}
             ]],
             {
                 d(1, get_visual),
-                rep(1)
             }
         ),
         {condition = line_begin}
@@ -84,11 +80,9 @@ return
         fmta(
             [[ 
             \subsection{<>}
-            \label{sub:<>}
             ]],
             {
                 d(1, get_visual),
-                rep(1)
             }
         ),
         {condition = line_begin}
@@ -342,14 +336,12 @@ return
                 \centering
                 <>
                 \caption{<>}
-                \label{<>}
             \end{figure}
             ]],
             {
                 i(1, "H"),
                 i(2),
                 i(3),
-                i(4)
             }
         ),
         {condition = line_begin}
@@ -363,14 +355,12 @@ return
                     <>
                 \end{tikzpicture}
                 \caption{<>}
-                \label{<>}
             \end{figure}
             ]],
             {
                 i(1, "H"),
                 i(2),
                 i(3),
-                i(4)
             }
         ),
         {condition = line_begin}

@@ -6,8 +6,8 @@ end
 
 return
 {
-    -- Various simple delimiters
-    s({trig="lr(", snippetType="autosnippet", wordTrig=false, dscr="Parenthesis"},
+    -- Various simple delimiters. I do not put the last part because of autopairs
+    s({trig="lrp", snippetType="autosnippet", wordTrig=false, dscr="Parenthesis"},
         fmta(
             [[ 
             \left( <> \right)
@@ -29,7 +29,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr[", snippetType="autosnippet", wordTrig=false, dscr="Brackets"},
+    s({trig="lrc", snippetType="autosnippet", wordTrig=false, dscr="Brackets"},
         fmta(
             [[ 
             \left[ <> \right]
@@ -40,7 +40,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="lr{", snippetType="autosnippet", wordTrig=false, dscr="Set"},
+    s({trig="set", snippetType="autosnippet", wordTrig=false, dscr="Set"},
         fmta(
             [[ 
             \left\{ <> \right\}
