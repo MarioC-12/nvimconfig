@@ -57,4 +57,4 @@ vim.o.spelllang = "es,en_gb"
 vim.o.colorcolumn = "80"
 
 -- Change default term to nu 
-vim.o.sh = 'nu'
+--[[ vim.o.sh = 'nu' ]]
