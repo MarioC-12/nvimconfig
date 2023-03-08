@@ -22,4 +22,3 @@ features for Telescope.
 - [inkscape](https://inkscape.org/). To draw the Latex diagrams.
 - [inkscape-figures](https://github.com/gillescastel/inkscape-figures). For the 
 integration with inkscape.
-- [lazygit](https://github.com/jesseduffield/lazygit). Integration with git.
