@@ -61,6 +61,11 @@ require('packer').startup(function(use)
       requires = { 'nvim-lua/plenary.nvim' }
   }
 
+  -- Python 
+  use {
+      'mfussenegger/nvim-dap-python'
+  }
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'

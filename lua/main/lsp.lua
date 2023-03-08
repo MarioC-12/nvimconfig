@@ -113,6 +113,7 @@ mason_lspconfig.setup_handlers {
 
 local dap_servers = {
     codelldb = {},
+    debugpy = {},
 }
 
 require('mason-nvim-dap').setup({
