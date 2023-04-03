@@ -135,6 +135,10 @@ return
         {t("\\mathbb{C}")},
         {condition = in_mathzone}
     ),
+    s({trig="KK", snippetType="autosnippet", dscr="Generic type"},
+        {t("\\mathbb{K}")},
+        {condition = in_mathzone}
+    ),
     s({trig="SS", snippetType="autosnippet", dscr="Spheres"},
         {t("\\mathbb{S}")},
         {condition = in_mathzone}
