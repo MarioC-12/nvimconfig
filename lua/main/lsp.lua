@@ -120,4 +120,3 @@ require('mason-nvim-dap').setup({
     automatic_setup = true,
     ensure_installed = dap_servers
 })
-require('mason-nvim-dap').setup_handlers{}

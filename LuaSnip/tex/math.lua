@@ -299,7 +299,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="part", snippetType="autosnippet", dscr="Partial diferential"},
+    s({trig="part", dscr="Partial diferential"},
         fmta(
             [[ 
             \frac{\partial <>}{\partial <>}
