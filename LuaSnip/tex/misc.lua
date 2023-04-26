@@ -73,6 +73,18 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="cancel", snippetType="autosnippet", dscr="Cancel to"},
+        fmta(
+            [[ 
+            \cancelto{<>}{<>}
+            ]],
+            {
+                i(1),
+                d(2, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="image", dscr="Bad image"},
         fmta(
             [[ 
