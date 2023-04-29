@@ -151,4 +151,16 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="array", snippetType="autosnippet", wordTrig=false, dscr="Array"},
+        fmta(
+            [[ 
+            \begin{array}{<>} <> \end{array}
+            ]],
+            {
+                i(1),
+                d(2, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
 }
