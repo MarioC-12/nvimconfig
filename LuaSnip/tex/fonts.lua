@@ -51,17 +51,6 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="mbb", snippetType="autosnippet", dscr="Math blackboard bold"},
-        fmta(
-            [[ 
-            \mathbb{<>}
-            ]],
-            {
-                d(1, get_visual),
-            }
-        ),
-        {condition = in_mathzone}
-    ),
     s({trig="mcal", snippetType="autosnippet", dscr="Math caligraphic"},
         fmta(
             [[ 
