@@ -15,7 +15,7 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- Enable dap integration
-require('telescope').load_extension('dap')
+-- require('telescope').load_extension('dap')
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })

@@ -64,3 +64,13 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 --vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 --vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+-- Compile with F5
+local CompileRun = function()
+    vim.cmd.write()
+
+    if vim.bo.filetype == 'c' then
+        vim.cmd("!gcc -g -Wall % -o %<")
+    end
+end
+vim.keymap.set({'n', 'i', 'v'}, '<F5>', CompileRun)

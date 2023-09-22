@@ -43,14 +43,16 @@ require('packer').startup(function(use)
   }
 
   -- Debugger
-  use { 'mfussenegger/nvim-dap',
-    requires = {
-      'jay-babu/mason-nvim-dap.nvim',
-      'theHamsta/nvim-dap-virtual-text',
-      'nvim-telescope/telescope-dap.nvim',
-      'rcarriga/nvim-dap-ui',
-    }
-  }
+  use { 'sakhnik/nvim-gdb' }
+
+  -- use { 'mfussenegger/nvim-dap',
+  --   requires = {
+  --     'jay-babu/mason-nvim-dap.nvim',
+  --     'theHamsta/nvim-dap-virtual-text',
+  --     'nvim-telescope/telescope-dap.nvim',
+  --     'rcarriga/nvim-dap-ui',
+  --   }
+  -- }
 
   -- Rust 
   use {
@@ -59,9 +61,9 @@ require('packer').startup(function(use)
   }
 
   -- Python 
-  use {
-      'mfussenegger/nvim-dap-python'
-  }
+  -- use {
+  --     'mfussenegger/nvim-dap-python'
+  -- }
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -93,7 +95,7 @@ require('packer').startup(function(use)
   use { 'akinsho/toggleterm.nvim' }
 
   -- Copilot
-  use { 'github/copilot.vim' }
+  -- use { 'github/copilot.vim' }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')

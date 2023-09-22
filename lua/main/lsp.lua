@@ -111,12 +111,12 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
-local dap_servers = {
-    codelldb = {},
-    debugpy = {},
-}
-
-require('mason-nvim-dap').setup({
-    automatic_setup = true,
-    ensure_installed = dap_servers
-})
+--local dap_servers = {
+--    codelldb = {},
+--    debugpy = {},
+--}
+--
+--require('mason-nvim-dap').setup({
+--    automatic_setup = true,
+--    ensure_installed = dap_servers
+--})
