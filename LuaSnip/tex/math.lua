@@ -82,6 +82,10 @@ return
         {t("\\equiv")},
         {condition = in_mathzone}
     ),
+    s({trig="subnor", snippetType="autosnippet", dscr="Normal subgroup"},
+        {t("\\triangleleft")},
+        {condition = in_mathzone}
+    ),
     s({trig=">>", snippetType="autosnippet", dscr="Much greater"},
         {t("\\gg")},
         {condition = in_mathzone}
