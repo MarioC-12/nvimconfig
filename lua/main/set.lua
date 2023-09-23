@@ -40,10 +40,9 @@ vim.o.autoindent = false
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
--- Set colorscheme
+-- Set color config
 vim.o.termguicolors = true
 vim.g.material_style = "darker"
-vim.cmd [[colorscheme material]]
 
 -- Return to last position in file
 vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]
