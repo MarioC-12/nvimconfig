@@ -84,6 +84,17 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="mfr", snippetType="autosnippet", dscr="Math frak"},
+        fmta(
+            [[ 
+            \mathfrak{<>}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="tt", snippetType="autosnippet", dscr="Normal text"},
         fmta(
             [[ 
