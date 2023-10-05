@@ -70,7 +70,7 @@ local CompileRun = function()
     vim.cmd.write()
 
     if vim.bo.filetype == 'c' then
-        vim.cmd("!gcc -g -Wall % -o %<")
+        vim.cmd("!clang -g -Wall % -o %<")
     elseif vim.bo.filetype == 'hs' then
         vim.cmd("!ghc % -o %<")
     end

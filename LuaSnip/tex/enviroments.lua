@@ -324,10 +324,20 @@ return
             \end{lstlisting}
             ]],
             {
-                i(1),
+                d(1, get_visual),
             }
         ),
         {condition = line_begin}
+    ),
+    s({trig="inlist", snippetType="autosnippet", dscr="Inline code listing"},
+        fmta(
+            [[ 
+            \lstinline{<>}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        )
     ),
     s({trig="fig", snippetType="autosnippet", dscr="Figure"},
         fmta(
