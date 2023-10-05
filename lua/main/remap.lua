@@ -71,6 +71,18 @@ local CompileRun = function()
 
     if vim.bo.filetype == 'c' then
         vim.cmd("!gcc -g -Wall % -o %<")
+    elseif vim.bo.filetype == 'hs' then
+        vim.cmd("!ghc % -o %<")
     end
 end
 vim.keymap.set({'n', 'i', 'v'}, '<F5>', CompileRun)
+
+-- Compile with make
+local CompileRunMake = function()
+    vim.cmd.write()
+
+    if vim.bo.filetype == 'c' or vim.bo.filetype == 'cpp' then
+        vim.cmd("!make")
+    end
+end
+vim.keymap.set({'n', 'i', 'v'}, '<F6>', CompileRunMake)
