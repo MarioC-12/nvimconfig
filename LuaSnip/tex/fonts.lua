@@ -151,4 +151,12 @@ return
         {t("\\mathcal{T}")},
         {condition = in_mathzone}
     ),
+    s({trig="pol", snippetType="autosnippet", dscr="Polynomial"},
+        {t("K\\left[\\mathbf{t}\\right]")},
+        {condition = in_mathzone}
+    ),
+    s({trig="mulpol", snippetType="autosnippet", dscr="Polynomial multiple"},
+        {t("K\\left[\\mathbf{x}_1, \\ldots, \\mathbf{x}_n\\right]")},
+        {condition = in_mathzone}
+    ),
 }
