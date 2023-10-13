@@ -15,10 +15,14 @@ return
         \usepackage{style}
 
         \begin{document}
+        \frontmatter
         \maketitle
         \setcounter{tocdepth}{3}% para que salgan las subsubsecciones en el indice
         \tableofcontents
-        <> 
+
+        \mainmatter
+        \include{./tex/<>}
+
         \end{document}
         ]],
         {
@@ -59,7 +63,6 @@ return
         \usepackage{faktor} %Paquete para cocientes complicados
         \usepackage{caption} %Cambiar el color de las caption
         \usepackage{pifont} %Cruzes
-        \usepackage{stmaryrd} %Evitar warning de negrita en símbolos
 
         %% Ruta de las fotos e inclusion de las mismas
         \usepackage{graphicx}
@@ -70,72 +73,71 @@ return
 
         %% Paquete para definir y utilizar colores por el documento
         \usepackage[dvipsnames,usenames]{xcolor} %activar e incluir colores
-        %% definicion de los colores que se van a utilizar en cada cabecera
-        \definecolor{capitulos}{RGB}{60,0,0}% gama de colores de los capitulos
-        \definecolor{secciones}{RGB}{95,8,5}% gama de colores de las secciones
-        \definecolor{subsecciones}{RGB}{140,36,31}% gama de colores de las subsections
-        \definecolor{subsubsecciones}{RGB}{188,109,79}% gama de colores de las subsubsections
-        \definecolor{teoremas}{RGB}{164,56,32}% gama de colores para los teoremas
-        \definecolor{demos}{RGB}{105,105,105} % gama de colores para el cuerpo de las demostraciones
+            %% definicion de los colores que se van a utilizar en cada cabecera
+            \definecolor{capitulos}{RGB}{60,0,0}% gama de colores de los capitulos
+            \definecolor{secciones}{RGB}{95,8,5}% gama de colores de las secciones
+            \definecolor{subsecciones}{RGB}{140,36,31}% gama de colores de las subsections
+            \definecolor{subsubsecciones}{RGB}{188,109,79}% gama de colores de las subsubsections
+            \definecolor{teoremas}{RGB}{164,56,32}% gama de colores para los teoremas
+            \definecolor{demos}{RGB}{105,105,105} % gama de colores para el cuerpo de las demostraciones
 
         %% Paquete para la edición y el formateo de capítulos, secciones...
         \usepackage[explicit]{titlesec}
-        %% Definición del estilo de los capítulos, secciones, etc...
-        \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge \uppercase{#1}}[\titlerule]
-        \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{\uppercase{#1}}
-        \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
-        \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
-
+            %% Definición del estilo de los capítulos, secciones, etc...
+            \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge #1}[\titlerule]
+            \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{#1}
+            \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
+            \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
 
         %% Paquete para el formateo de entornos del proyecto
         \usepackage{ntheorem}[thmmarks]
-        %% Definicion del aspecto de los entornos matematicos del proyecto
-        \theoremstyle{break}
-        \theoremheaderfont{\normalfont\bfseries\color{teoremas}}
-        \theorembodyfont{\itshape}
-        \theoremseparator{\vspace{0.2cm}}
-        \theorempreskip{\topsep}
-        \theorempostskip{\topsep}
-        \theoremindent0cm
-        \theoremnumbering{arabic}
-        \theoremsymbol{}
+            %% Definicion del aspecto de los entornos matematicos del proyecto
+            \theoremstyle{break}
+            \theoremheaderfont{\normalfont\bfseries\color{teoremas}}
+            \theorembodyfont{\itshape}
+            \theoremseparator{\vspace{0.2cm}}
+            \theorempreskip{\topsep}
+            \theorempostskip{\topsep}
+            \theoremindent0cm
+            \theoremnumbering{arabic}
+            \theoremsymbol{}
 
-        \theoremprework{\vspace{0.2cm} \hrule}
-        \theorempostwork{\vspace{0.2cm}\hrule}
-        \newtheorem*{defi}{Definición}
+            \theoremprework{\vspace{0.2cm} \hrule}
+            \theorempostwork{\vspace{0.2cm}\hrule}
+                \newtheorem*{defi}{Definición}
 
-        \theoremprework{\vspace{0.2cm} \hrule}
-        \theorempostwork{\vspace{0.2cm}\hrule}
-        \newtheorem*{enun}{Enunciado}
+            \theoremprework{\vspace{0.2cm} \hrule}
+            \theorempostwork{\vspace{0.2cm}\hrule}
+                \newtheorem*{enun}{Enunciado}
 
 
-        \theoremprework{\vspace{0.25cm}}
-        \newtheorem*{theo}{Teorema}
+            \theoremprework{\vspace{0.25cm}}
+                \newtheorem*{theo}{Teorema}
 
-        \theoremprework{\vspace{0.25cm}}
-        \newtheorem*{coro}{Corolario}
+            \theoremprework{\vspace{0.25cm}}
+                \newtheorem*{coro}{Corolario}
 
-        \theoremprework{\vspace{0.25cm}}
-        \newtheorem*{lema}{Lema}
+            \theoremprework{\vspace{0.25cm}}
+                \newtheorem*{lema}{Lema}
 
-        \theoremprework{\vspace{0.25cm}}
-        \newtheorem*{prop}{Proposición}
+            \theoremprework{\vspace{0.25cm}}
+                \newtheorem*{prop}{Proposición}
 
-        \theoremheaderfont{\normalfont}
-        \theorembodyfont{\normalfont\color{demos}}
-        \theoremsymbol{\hfill\square}
-        \newtheorem*{demo}{\underline{Demostración}:}
+            \theoremheaderfont{\normalfont}
+            \theorembodyfont{\normalfont\color{demos}}
+            \theoremsymbol{\hfill\square}
+                \newtheorem*{demo}{\underline{Demostración}:}
 
-        \theoremheaderfont{\normalfont}
-        \theorembodyfont{\normalfont}
-        \newtheorem*{obs}{\underline{Observación}:}
-        \newtheorem*{ej}{\underline{Ejemplo}:}
-        \newtheorem*{pg}{\underline{Política general}:}
-        \newtheorem*{il}{\underline{Ilustración}:}
-
-        \theoremheaderfont{\normalfont}
-        \theorembodyfont{\sffamily}
-        \newtheorem*{sol}{\underline{Solución}:}
+            \theoremheaderfont{\normalfont}
+            \theorembodyfont{\normalfont}
+                \newtheorem*{obs}{\underline{Observación}:}
+                \newtheorem*{ej}{\underline{Ejemplo}:}
+                \newtheorem*{pg}{\underline{Política general}:}
+                \newtheorem*{il}{\underline{Ilustración}:}
+                
+                \theoremheaderfont{\normalfont}
+            \theorembodyfont{\sffamily}
+                \newtheorem*{sol}{\underline{Solución}:}
 
         %% Definicion de operadores especiales para simplificar la escritura matematica
         \DeclareMathOperator{\dom}{dom}
@@ -145,12 +147,11 @@ return
         \DeclareMathOperator{\inter}{Int}
         \DeclareMathOperator{\adh}{Adh}
         \DeclareMathOperator{\fr}{Fr}
+        \DeclareMathOperator{\mcd}{mcd}
+        \DeclareMathOperator{\mcm}{mcm}
+        \DeclareMathOperator{\ord}{ord}
+        \DeclareMathOperator{\card}{Card}
         \newcommand{\dif}[1]{\ d#1}
-        \newcommand{\ab}{\stackrel{\text{ab.}}{\subset}}
-        \newcommand{\cerr}{\stackrel{\text{cerr.}}{\subset}}
-        \newcommand{\conx}{\stackrel{\text{conx.}}{\subset}}
-        \newcommand{\ent}{\stackrel{\text{ent.}}{\subset}}
-        \newcommand{\ac}{\stackrel[\text{cerr.}]{\text{ab.}}{\subset}}
 
         %% Paquete e instrucciones para la generacion de los dibujos
         \usepackage{pgfplots}
@@ -161,29 +162,29 @@ return
         \tdplotsetmaincoords{80}{45}
         \tdplotsetrotatedcoords{-90}{180}{-90}
         \usetikzlibrary{arrows}
-        %% style for surfaces
-        \tikzset{surface/.style={draw=blue!70!black, fill=blue!40!white, fill opacity=.6}}
+            %% style for surfaces
+            \tikzset{surface/.style={draw=blue!70!black, fill=blue!40!white, fill opacity=.6}}
 
-        %% macros to draw back and front of cones
-        %% optional first argument is styling; others are z, radius, side offset (in degrees)
-        \newcommand{\coneback}[4][]{
-            %% start at the correct point on the circle, draw the arc, then draw to the origin of the diagram, then close the path
-            \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:225+#4:#3) -- (O) --cycle;
-        }
-        \newcommand{\conefront}[4][]{
-            \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:-135+#4:#3) -- (O) --cycle;
-        }
-
-        \tikzset{middlearrow/.style={decoration={markings, mark= at position 0.5 with {\arrow{#1}},},postaction={decorate}}}
-
-        \usetikzlibrary{decorations.markings}
-
-        \newcommand{\AxisRotator}[1][rotate=0]{
+            %% macros to draw back and front of cones
+            %% optional first argument is styling; others are z, radius, side offset (in degrees)
+            \newcommand{\coneback}[4][]{
+                %% start at the correct point on the circle, draw the arc, then draw to the origin of the diagram, then close the path
+                \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:225+#4:#3) -- (O) --cycle;
+            }
+            \newcommand{\conefront}[4][]{
+                \draw[canvas is xy plane at z=#2, #1] (45-#4:#3) arc (45-#4:-135+#4:#3) -- (O) --cycle;
+            }
+            
+            \tikzset{middlearrow/.style={decoration={markings, mark= at position 0.5 with {\arrow{#1}},},postaction={decorate}}}
+            
+            \usetikzlibrary{decorations.markings}
+            
+            \newcommand{\AxisRotator}[1][rotate=0]{
             \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-150:150:1 and 1);
-        }
-
-        \usetikzlibrary{shapes}
-        \usetikzlibrary{babel}
+            }
+            
+            \usetikzlibrary{shapes}
+            \usetikzlibrary{babel}
 
         % Paquetes para figuras con InkScape
         \usepackage{import}
@@ -195,7 +196,6 @@ return
             \import{./figures/}{#2.pdf_tex}
         }
         \DeclareMathAlphabet{\matheuler}{U}{eus}{m}{n}
-        \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
         ]],
         {
         }
