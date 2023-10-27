@@ -1,3 +1,20 @@
+-- Diagnostics window configuration
+vim.lsp.handlers["textDocument/hover"] =
+  vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {
+    border = "single"
+  }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] =
+  vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {
+    border = "single"
+  }
+)
+
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
