@@ -71,8 +71,9 @@ local CompileRun = function()
 
     if vim.bo.filetype == 'c' then
         vim.cmd("!clang -g -Wall % -o %<")
-    elseif vim.bo.filetype == 'hs' then
-        vim.cmd("!ghc % -o %<")
+    end
+    if vim.bo.filetype == 'rust' then
+        vim.cmd("!cargo build")
     end
 end
 vim.keymap.set({'n', 'i', 'v'}, '<F5>', CompileRun)
@@ -86,3 +87,13 @@ local CompileRunMake = function()
     end
 end
 vim.keymap.set({'n', 'i', 'v'}, '<F6>', CompileRunMake)
+
+-- Execute
+local Execute = function()
+    vim.cmd.write()
+
+    if vim.bo.filetype == 'rust' then
+        vim.cmd("!cargo run")
+    end
+end
+vim.keymap.set({'n', 'i', 'v'}, '<F10>', Execute)
