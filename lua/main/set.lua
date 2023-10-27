@@ -59,7 +59,3 @@ vim.o.colorcolumn = "80"
 -- Folding
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 0
---vim.o.foldclose = "all"
-
--- Change default term to nu 
---[[ vim.o.sh = 'nu' ]]
