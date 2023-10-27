@@ -47,7 +47,6 @@ end
 local servers = {
   clangd = {},
   pyright = {},
-  rust_analyzer = {},
 
   lua_ls = {
     Lua = {
@@ -98,7 +97,7 @@ require('mason').setup()
 local mason_lspconfig = require 'mason-lspconfig'
 
 mason_lspconfig.setup {
-  ensure_installed = vim.tbl_keys(servers),
+  ensure_installed = vim.tbl_keys(servers)
 }
 
 mason_lspconfig.setup_handlers {
@@ -110,13 +109,3 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
-
---local dap_servers = {
---    codelldb = {},
---    debugpy = {},
---}
---
---require('mason-nvim-dap').setup({
---    automatic_setup = true,
---    ensure_installed = dap_servers
---})
