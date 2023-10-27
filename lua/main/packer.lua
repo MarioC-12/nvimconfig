@@ -25,7 +25,7 @@ require('packer').startup(function(use)
 
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-path', 'hrsh7th/cmp-buffer' },
   }
 
   use { 'L3MON4D3/LuaSnip' }
@@ -45,25 +45,9 @@ require('packer').startup(function(use)
   -- Debugger
   use { 'sakhnik/nvim-gdb' }
 
-  -- use { 'mfussenegger/nvim-dap',
-  --   requires = {
-  --     'jay-babu/mason-nvim-dap.nvim',
-  --     'theHamsta/nvim-dap-virtual-text',
-  --     'nvim-telescope/telescope-dap.nvim',
-  --     'rcarriga/nvim-dap-ui',
-  --   }
-  -- }
-
   -- Rust 
-  use {
-      'simrat39/rust-tools.nvim',
-      requires = { 'nvim-lua/plenary.nvim' }
-  }
-
-  -- Python 
-  -- use {
-  --     'mfussenegger/nvim-dap-python'
-  -- }
+  use {'simrat39/rust-tools.nvim'}
+  use { 'rust-lang/rust.vim' }
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
