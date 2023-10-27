@@ -6,7 +6,7 @@ vim.keymap.set({ 'i', 's' }, '<C-j>', function ()
 end, { silent = true, expr = true })
 -- Map backward jump
 vim.keymap.set({ 'i', 's' }, '<C-k>', function ()
-  return luasnip.jumpable(-1) and '<Plug>luasnip-jump-next' or '<C-k>'
+  return luasnip.jumpable(-1) and '<Plug>luasnip-jump-prev' or '<C-k>'
 end, { silent = true, expr = true })
 
 require("luasnip").config.set_config({
