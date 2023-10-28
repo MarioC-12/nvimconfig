@@ -59,6 +59,11 @@ require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use { 'lukas-reineke/indent-blankline.nvim', main = 'isp'} -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  use { 'j-hui/fidget.nvim', tag = 'legacy', config = function()
+        require("fidget").setup {
+          -- options
+        }end, }
+  --
   --use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
   -- Tex related plugins
