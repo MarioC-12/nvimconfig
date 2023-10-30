@@ -68,6 +68,7 @@ require('packer').startup(function(use)
 
   -- Tex related plugins
   use 'lervag/vimtex'
+  use 'micangl/cmp-vimtex'
   use 'KeitaNakamura/tex-conceal.vim'
 
   -- Fuzzy Finder (files, lsp, etc)
