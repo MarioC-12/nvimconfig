@@ -39,6 +39,6 @@ cmp.setup({
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
-    { name = 'vimtex'},
+    { name = 'vimtex' }
   },
 })

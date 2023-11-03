@@ -25,7 +25,7 @@ require('packer').startup(function(use)
 
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-path', 'hrsh7th/cmp-buffer' },
+    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-path', 'hrsh7th/cmp-buffer', 'micangl/cmp-vimtex' },
   }
 
   use { 'L3MON4D3/LuaSnip' }
@@ -46,7 +46,7 @@ require('packer').startup(function(use)
   use { 'sakhnik/nvim-gdb' }
 
   -- Rust 
-  use {'simrat39/rust-tools.nvim'}
+  use { 'simrat39/rust-tools.nvim' }
   use { 'rust-lang/rust.vim' }
 
   -- Git related plugins
@@ -59,16 +59,12 @@ require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use { 'lukas-reineke/indent-blankline.nvim', main = 'isp'} -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
-  use { 'j-hui/fidget.nvim', tag = 'legacy', config = function()
-        require("fidget").setup {
-          -- options
-        }end, }
+  use { 'j-hui/fidget.nvim', tag = 'legacy', config = function() require("fidget").setup { }end, }
   --
   --use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
   -- Tex related plugins
   use 'lervag/vimtex'
-  use 'micangl/cmp-vimtex'
   use 'KeitaNakamura/tex-conceal.vim'
 
   -- Fuzzy Finder (files, lsp, etc)
