@@ -101,7 +101,6 @@ return {
     {
         "williamboman/mason.nvim",
         dependencies = "williamboman/mason-lspconfig.nvim",
-        ft = { 'vim', 'lua' },
         config = mason_opts,
     },
 
