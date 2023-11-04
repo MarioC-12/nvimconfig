@@ -1,23 +1,25 @@
-local lsp_opts = function ()
-    local helpers = require('luasnip-helper-funcs')
+local helpers = require('luasnip-helper-funcs')
 
+local lsp_opts = function ()
     -- Diagnostics window configuration
     vim.lsp.handlers["textDocument/hover"] =
     vim.lsp.with(
-        vim.lsp.handlers.hover,
-        {
-            border = "single"
-        }
+    vim.lsp.handlers.hover,
+    {
+        border = "single"
+    }
     )
 
     vim.lsp.handlers["textDocument/signatureHelp"] =
     vim.lsp.with(
-        vim.lsp.handlers.signature_help,
-        {
-            border = "single"
-        }
+    vim.lsp.handlers.signature_help,
+    {
+        border = "single"
+    }
     )
+end
 
+local mason_opts = function()
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
     --
@@ -64,15 +66,12 @@ local lsp_opts = function ()
         },
     }
 
-    -- Setup neovim lua configuration
-    require('neodev').setup()
-    --
+    -- Setup mason so it can manage external tooling
+    require('mason').setup()
+
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-    -- Setup mason so it can manage external tooling
-    require('mason').setup()
 
     -- Ensure the servers above are installed
     local mason_lspconfig = require 'mason-lspconfig'
@@ -93,15 +92,25 @@ local lsp_opts = function ()
 end
 
 return {
-    "neovim/nvim-lspconfig",
-    priority = 100000,
-    dependencies = {
-        -- Automatically install LSPs to stdpath for neovim
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-
-        -- Additional lua configuration, makes nvim stuff amazing
-        "folke/neodev.nvim",
+    {
+        "neovim/nvim-lspconfig",
+        priority = 100000,
+        config = lsp_opts,
     },
-    config = lsp_opts,
+    -- Automatically install LSPs to stdpath for neovim
+    {
+        "williamboman/mason.nvim",
+        dependencies = "williamboman/mason-lspconfig.nvim",
+        ft = { 'vim', 'lua' },
+        config = mason_opts,
+    },
+
+    -- Additional lua configuration, makes nvim stuff amazing
+    {
+        "folke/neodev.nvim",
+        config = function()
+            require('neodev').setup()
+        end,
+        ft = { 'vim', 'lua' },
+    }
 }
