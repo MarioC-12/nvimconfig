@@ -1,4 +1,5 @@
 local helpers = require('luasnip-helper-funcs')
+
 -- Diagnostics window configuration
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(
