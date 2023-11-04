@@ -15,7 +15,7 @@ local terminal_opts = function ()
 end
 
 local terminal_keys = {
-    '<C-t>', ':ToggleTerm<cr>'
+    { '<C-t>', ':ToggleTerm<cr>' }
 }
 
 return {
