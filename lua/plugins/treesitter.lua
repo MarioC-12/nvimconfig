@@ -1,10 +1,12 @@
+local languages = { 'c', 'cpp', 'lua', 'python', 'rust', 'vim' }
+
 local treesitter_opts = function()
     pcall(require('nvim-treesitter.install').update { with_sync = true })
 
     ---@diagnostic disable-next-line: missing-fields
     require('nvim-treesitter.configs').setup {
         -- Add languages to be installed here that you want installed for treesitter
-        ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'vim' },
+        ensure_installed = languages,
 
         highlight = { enable = true },
         indent = { enable = false, disable = { 'python' } },
@@ -70,4 +72,5 @@ return {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
     config = treesitter_opts,
+    ft = languages,
 }

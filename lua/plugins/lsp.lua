@@ -27,6 +27,7 @@ local lsp_opts = function ()
         clangd = {},
         pyright = {},
         texlab = {},
+        rust_analyzer = {},
 
         lua_ls = {
             Lua = {

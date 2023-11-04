@@ -16,9 +16,11 @@ return {
     {
         "lervag/vimtex",
         config = vimtex_opts,
+        ft = "tex",
     },
     {
         "KeitaNakamura/tex-conceal.vim",
         config = tex_conceal_opts,
+        ft = "tex",
     },
 }

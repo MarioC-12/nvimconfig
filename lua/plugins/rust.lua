@@ -36,9 +36,13 @@ local opts = {
 return {
     {
         "rust-lang/rust.vim",
+        ft = "rust",
+    },
+    {
+        "simrat39/rust-tools.nvim",
         config = function ()
             require("rust-tools").setup(opts)
         end,
+        ft = "rust",
     },
-    "simrat39/rust-tools.nvim",
 }
