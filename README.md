@@ -13,7 +13,7 @@ To execute it, you will probably first need to give it the necessary permissions
 For that, simply execute `chmod +x install.sh`.
 
 The first time you open `nvim` there will probably be a lot of errors. Do not worry,
-skip them and Packer will install the plugins so the next time all the errors 
+skip them and Lazy will install the plugins so the next time all the errors 
 will be gone.
 
 ### Recommended dependencies

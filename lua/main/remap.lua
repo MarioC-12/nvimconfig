@@ -1,11 +1,6 @@
 -- Most remaps come from The Primeagen (https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/remap.lua)
--- [[ Basic Keymaps ]]
--- Set <space> as the leader key
---  NOTE: Must happen before plugins are required 
---  (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
+-- [[ Basic Keymaps ]]
 -- Fast saving
 vim.keymap.set('n', ',w', ":w<cr>", { silent = false })
 
