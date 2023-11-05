@@ -14,6 +14,10 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'",
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'",
     { expr = true, silent = true })
 
+-- Insert line in normal mode
+vim.keymap.set('n', '<leader>o', "o<esc>")
+vim.keymap.set('n', '<leader>O', "O<esc>")
+
 -- Next line to end line 
 vim.keymap.set('n', 'J', "mzJ`z")
 
@@ -22,12 +26,6 @@ vim.keymap.set('n', '<C-d>', "<C-d>zz")
 vim.keymap.set('n', '<C-u>', "<C-d>zz")
 vim.keymap.set('n', 'n', "nzzzv")
 vim.keymap.set('n', 'N', "Nzzzv")
-
--- Move between windows
-vim.keymap.set('n', '<C-j>', "<C-W>j", { })
-vim.keymap.set('n', '<leader><C-k>', "<C-W>k", { })
-vim.keymap.set('n', '<C-h>', "<C-W>h", { })
-vim.keymap.set('n', '<C-l>', "<C-W>l", { })
 
 -- Move between buffers
 vim.keymap.set('n', '<leader>j', ":bprev<cr>", { })
@@ -52,7 +50,7 @@ vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
 vim.keymap.set("n", "<leader>v", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Autocorrect
-vim.keymap.set('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
+vim.keymap.set('i', '<C-o>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
