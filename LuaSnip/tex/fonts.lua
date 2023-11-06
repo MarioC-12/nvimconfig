@@ -95,6 +95,17 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="meu", snippetType="autosnippet", dscr="Math euler"},
+        fmta(
+            [[ 
+            \matheuler{<>}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="tt", snippetType="autosnippet", dscr="Normal text"},
         fmta(
             [[ 
