@@ -163,12 +163,13 @@ return
     s({trig="def", dscr="Definition"},
         fmta(
             [[ 
-            \begin{defi}
+            \begin{defi}[<>]
                 <>
             \end{defi}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
@@ -176,12 +177,13 @@ return
     s({trig="prop", dscr="Proposition"},
         fmta(
             [[ 
-            \begin{prop}
+            \begin{prop}[<>]
                 <>
             \end{prop}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
@@ -189,12 +191,13 @@ return
     s({trig="th", dscr="Theorem"},
         fmta(
             [[ 
-            \begin{theo}
+            \begin{theo}[<>]
                 <>
             \end{theo}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
@@ -215,12 +218,13 @@ return
     s({trig="lema", dscr="Lemma"},
         fmta(
             [[ 
-            \begin{lema}
+            \begin{lema}[<>]
                 <>
             \end{lema}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
@@ -228,12 +232,13 @@ return
     s({trig="cor", dscr="Corollary"},
         fmta(
             [[ 
-            \begin{coro}
+            \begin{coro}[<>]
                 <>
             \end{coro}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
@@ -241,12 +246,13 @@ return
     s({trig="obs", dscr="Observation"},
         fmta(
             [[ 
-            \begin{obs}
+            \begin{obs}[<>]
                 <>
             \end{obs}
             ]],
             {
-                d(1, get_visual),
+                i(1),
+                d(2, get_visual),
             }
         ),
         {condition = line_begin}
