@@ -65,6 +65,9 @@ local CompileRun = function()
     if vim.bo.filetype == 'c' then
         vim.cmd("!clang -g -Wall % -o %<")
     end
+    if vim.bo.filetype == 'cpp' then
+        vim.cmd("!clang++ -g -fstandalone-debug -Wall % -o %<")
+    end
     if vim.bo.filetype == 'rust' then
         vim.cmd("!cargo build")
     end
