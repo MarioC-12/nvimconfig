@@ -15,7 +15,7 @@ local cmp_opts = function()
             ['<C-Space>'] = cmp.mapping.complete(),
             ['<C-y>'] = cmp.mapping.confirm {
                 behavior = cmp.ConfirmBehavior.Replace,
-                select = false,
+                select = true,
             },
             ['<Tab>'] = cmp.mapping(function(fallback)
                 if cmp.visible() then
