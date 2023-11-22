@@ -38,7 +38,7 @@ local cmp_opts = function()
             { name = 'luasnip' },
             { name = 'path' },
             { name = 'buffer' },
-            { name = 'vimtex' }
+            { name = 'vimtex' },
         },
     })
 end

@@ -28,7 +28,6 @@ local mason_opts = function()
     local servers = {
         clangd = {},
         pyright = {},
-        texlab = {},
         rust_analyzer = {},
 
         lua_ls = {

@@ -16,6 +16,9 @@ return {
     {
         "lervag/vimtex",
         config = vimtex_opts,
+        dependencies = {
+            "micangl/cmp-vimtex",
+        },
         ft = "tex",
     },
     {
