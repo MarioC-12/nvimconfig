@@ -77,3 +77,6 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
   pattern = { '*.tex', '*.md' },
   command = 'setlocal spell'
 })
+
+-- Trailiing whitespaces
+ vim.fn.matchadd('errorMsg', [[\s\+$]])
