@@ -1,11 +1,11 @@
 local cmp_opts = function()
     local cmp = require 'cmp'
-    --local luasnip = require 'luasnip'
+    local luasnip = require 'luasnip'
     ---@diagnostic disable-next-line: missing-fields
     cmp.setup({
         snippet = {
             expand = function(args)
-                --luasnip.lsp_expand(args.body)
+                luasnip.lsp_expand(args.body)
             end,
         },
 
@@ -35,7 +35,7 @@ local cmp_opts = function()
 
         sources = {
             { name = 'nvim_lsp' },
-            --{ name = 'luasnip' },
+            { name = 'luasnip' },
             { name = 'path' },
             { name = 'buffer' },
             { name = 'vimtex' },
@@ -47,11 +47,11 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
-        --"saadparwaiz1/cmp_luasnip",
+        "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-buffer",
         "micangl/cmp-vimtex",
-        --"L3MON4D3/LuaSnip",
+        "L3MON4D3/LuaSnip",
     },
     config = cmp_opts,
 }

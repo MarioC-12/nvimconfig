@@ -1,2 +1,3 @@
 /plugin
 after/plugin/theme.lua
+lazy-lock.json
