@@ -162,6 +162,22 @@ return
         {t("\\mathcal{T}")},
         {condition = in_mathzone}
     ),
+    s({trig="BX", snippetType="autosnippet", dscr="Bold x"},
+        {t("\\mathbf{x}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="BT", snippetType="autosnippet", dscr="Bold t"},
+        {t("\\mathbf{t}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="BS", snippetType="autosnippet", dscr="Bold s"},
+        {t("\\mathbf{s}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="BP", snippetType="autosnippet", dscr="Bold p"},
+        {t("\\mathbf{p}")},
+        {condition = in_mathzone}
+    ),
     s({trig="pol", snippetType="autosnippet", dscr="Polynomial"},
         {t("K\\left[\\mathbf{t}\\right]")},
         {condition = in_mathzone}
