@@ -1,4 +1,4 @@
-local languages = { 'c', 'cpp', 'lua', 'python', 'rust', 'vim' }
+local languages = { 'c', 'cpp', 'lua', 'python', 'rust', 'vim', 'java' }
 
 local treesitter_opts = function()
     pcall(require('nvim-treesitter.install').update { with_sync = true })
