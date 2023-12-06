@@ -61,4 +61,24 @@ return
             { delimiters = '*+' }
         )
     ),
+    s({trig="table", dscr="Table Figure"},
+        fmt(
+            [[ 
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{ c c }
+                 cell1 & cell2 \\ 
+                 cell4 & cell5 \\  
+                \end{tabular}
+                \caption{*+}
+                \label{*+}
+            \end{table}
+            ]],
+            {
+                i(1),
+                i(2),
+            },
+            { delimiters = '*+' }
+        )
+    ),
 }
