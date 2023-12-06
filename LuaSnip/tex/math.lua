@@ -423,7 +423,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="(%a)(%d)", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="Simple subscript"},
+    s({trig="([%a])(%d)", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="Simple subscript"},
         fmta(
             [[ 
             <>_<>
@@ -435,7 +435,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="(%a)_(%d%d)", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="Double subscript"},
+    s({trig="([%a])_(%d%d)", wordTrig=false, regTrig = true, snippetType="autosnippet", dscr="Double subscript"},
         fmta(
             [[ 
             <>_{<>}
