@@ -15,7 +15,7 @@ vim.o.so = 7
 vim.o.wildmenu = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = 'n'
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -28,14 +28,19 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Fix tabs
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smarttab = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
 
 -- No automatic tabs
-vim.o.autoindent = false
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.wrap = true
+
+-- Line breaks
+vim.o.linebreak = true
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -60,6 +65,10 @@ vim.o.colorcolumn = "80"
 -- Folding
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 0
+
+-- No backup (use git)
+vim.o.nowb = true
+vim.o.noswapfile = true
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

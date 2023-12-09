@@ -18,19 +18,26 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'",
 vim.keymap.set('n', '<leader>o', "o<esc>")
 vim.keymap.set('n', '<leader>O', "O<esc>")
 
--- Next line to end line 
+-- Next line to end line
 vim.keymap.set('n', 'J', "mzJ`z")
 
 -- Maintaining the center
 vim.keymap.set('n', '<C-d>', "<C-d>zz")
-vim.keymap.set('n', '<C-u>', "<C-d>zz")
+vim.keymap.set('n', '<C-u>', "<C-u>zz")
 vim.keymap.set('n', 'n', "nzzzv")
 vim.keymap.set('n', 'N', "Nzzzv")
 
 -- Move between buffers
-vim.keymap.set('n', '<leader>j', ":bprev<cr>", { })
-vim.keymap.set('n', '<leader>k', ":bnext<cr>", { })
-vim.keymap.set('n', '<leader>h', ":bd!", { })
+vim.keymap.set('n', '<leader>j', ":bprev<cr>", {})
+vim.keymap.set('n', '<leader>k', ":bnext<cr>", {})
+vim.keymap.set('n', '<leader>h', ":bd!", {})
+
+-- Manage tabs
+vim.keymap.set('n', '<leader>tn', ":tabnew<cr>", {})
+vim.keymap.set('n', '<leader>to', ":tabonly<cr>", {})
+vim.keymap.set('n', '<leader>tc', ":tabclose<cr>", {})
+vim.keymap.set('n', '<leader>t<leader>', ":tabnext<cr>", {})
+vim.keymap.set('n', '<leader>tm', ":tabclose", {})
 
 -- Move highlights
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
@@ -40,11 +47,15 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('x', '<leader>p', [["_dP"]])
 
 -- Yank to system
-vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])
 
--- Remove without copying 
-vim.keymap.set({'n', 'v'}, '<leader>d', [["_d]])
+-- Remove without copying
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
+
+-- Better indent
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
 -- Sustitute current word (and all equal)
 vim.keymap.set("n", "<leader>v", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -57,6 +68,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 --vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+-- Quickly open the config
+vim.keymap.set("n", "<leader>vpp", "<cmd>tabnew ~/.config/nvim<CR>");
 
 -- Compile with F5
 local CompileRun = function()
@@ -72,7 +86,7 @@ local CompileRun = function()
         vim.cmd("!cargo build")
     end
 end
-vim.keymap.set({'n', 'i', 'v'}, '<F5>', CompileRun)
+vim.keymap.set('n', '<F5>', CompileRun)
 
 -- Compile with make
 local CompileRunMake = function()
@@ -82,7 +96,7 @@ local CompileRunMake = function()
         vim.cmd("!make")
     end
 end
-vim.keymap.set({'n', 'i', 'v'}, '<F6>', CompileRunMake)
+vim.keymap.set('n', '<F6>', CompileRunMake)
 
 -- Execute
 local Execute = function()
@@ -92,4 +106,4 @@ local Execute = function()
         vim.cmd("!cargo run")
     end
 end
-vim.keymap.set({'n', 'i', 'v'}, '<F10>', Execute)
+vim.keymap.set('n', '<F10>', Execute)

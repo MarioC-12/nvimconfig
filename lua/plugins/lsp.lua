@@ -17,6 +17,7 @@ local lsp_opts = function ()
         border = "single"
     }
     )
+    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 end
 
 local mason_opts = function()
