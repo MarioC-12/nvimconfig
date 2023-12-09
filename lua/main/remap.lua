@@ -70,7 +70,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 --vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- Quickly open the config
-vim.keymap.set("n", "<leader>vpp", "<cmd>tabnew ~/.config/nvim<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim<CR><cmd>cd %<cr>");
 
 -- Compile with F5
 local CompileRun = function()

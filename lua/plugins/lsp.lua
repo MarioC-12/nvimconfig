@@ -1,22 +1,22 @@
 local helpers = require('luasnip-helper-funcs')
 
-local lsp_opts = function ()
+local lsp_opts = function()
     -- Diagnostics window configuration
     vim.lsp.handlers["textDocument/hover"] =
-    vim.lsp.with(
-    vim.lsp.handlers.hover,
-    {
-        border = "single"
-    }
-    )
+        vim.lsp.with(
+            vim.lsp.handlers.hover,
+            {
+                border = "single"
+            }
+        )
 
     vim.lsp.handlers["textDocument/signatureHelp"] =
-    vim.lsp.with(
-    vim.lsp.handlers.signature_help,
-    {
-        border = "single"
-    }
-    )
+        vim.lsp.with(
+            vim.lsp.handlers.signature_help,
+            {
+                border = "single"
+            }
+        )
     vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 end
 
