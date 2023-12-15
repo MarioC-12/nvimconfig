@@ -17,7 +17,9 @@ local luasnip_opts = function()
     end, { silent = true, expr = true })
 
 
-    require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/LuaSnip/" })
+    local workspace_specific = vim.fn.getcwd() .. "/snippets/"
+    require("luasnip.loaders.from_lua")
+            .lazy_load({ paths = {"~/.config/nvim/LuaSnip/", workspace_specific} })
     require("luasnip.loaders.from_vscode").lazy_load()
 end
 
