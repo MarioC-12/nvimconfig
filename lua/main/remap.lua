@@ -72,6 +72,17 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 -- Quickly open the config
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim<CR><cmd>cd %<cr>");
 
+-- Create workspace specific snippets
+local create_or_goto_plugins = function ()
+    print(vim.fn.filereadable("./snippets/all.lua"))
+    if vim.fn.filereadable("./snippets/all.lua") == 0 then
+        vim.api.nvim_command("silent !mkdir -p snippets")
+        vim.api.nvim_command("silent !cp ~/.config/nvim/LuaSnip/template.txt ./snippets/all.lua")
+    end
+    vim.api.nvim_command("e +17 ./snippets/all.lua")
+end
+vim.keymap.set("n", "<leader>gp", create_or_goto_plugins)
+
 -- Compile with F5
 local CompileRun = function()
     vim.cmd.write()
