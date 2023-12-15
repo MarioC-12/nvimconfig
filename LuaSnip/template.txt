@@ -1,3 +1,5 @@
+line_begin = require("luasnip.extras.expand_conditions").line_begin;
+
 function get_visual()
     local ls = require("luasnip")
     local sn = ls.snippet_node
@@ -14,5 +16,5 @@ function in_mathzone()
 end
 
 return {
- 
+
 }
