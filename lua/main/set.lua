@@ -15,7 +15,7 @@ vim.o.so = 7
 vim.o.wildmenu = true
 
 -- Enable mouse mode
-vim.o.mouse = 'n'
+vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true
