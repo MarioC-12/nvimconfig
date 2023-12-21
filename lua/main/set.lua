@@ -64,11 +64,13 @@ vim.o.colorcolumn = "80"
 
 -- Folding
 vim.o.foldmethod = "indent"
+vim.o.foldcolumn = '1'
 vim.o.foldlevel = 0
 
 -- No backup (use git)
-vim.o.nowb = true
+-- vim.o.nowb = true
 vim.o.noswapfile = true
+vim.o.nobackup = true
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
