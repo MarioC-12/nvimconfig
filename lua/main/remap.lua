@@ -95,6 +95,9 @@ local CompileRun = function()
     if vim.bo.filetype == 'rust' then
         vim.cmd("!cargo build")
     end
+    if vim.bo.filetype == 'haskell' then
+        vim.cmd("!ghc -o %< %")
+    end
 end
 vim.keymap.set('n', '<F5>', CompileRun)
 
