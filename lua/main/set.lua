@@ -38,6 +38,7 @@ vim.o.softtabstop = 4
 vim.o.autoindent = true
 vim.o.smartindent = true
 vim.o.wrap = true
+vim.o.tw = 80
 
 -- Line breaks
 vim.o.linebreak = true
