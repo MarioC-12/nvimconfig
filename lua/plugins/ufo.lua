@@ -20,9 +20,9 @@ local ufo_opts = function()
 end
 
 return {
-    "kevinhwang91/nvim-ufo",
-    dependencies = {
-        "kevinhwang91/promise-async"
-    },
-    config = ufo_opts,
+    -- "kevinhwang91/nvim-ufo",
+    -- dependencies = {
+    --     "kevinhwang91/promise-async"
+    -- },
+    -- config = ufo_opts,
 }
