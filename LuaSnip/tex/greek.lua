@@ -5,52 +5,52 @@ end
 
 return
 {
-    s({trig=";a", snippetType="autosnippet"},
+    s({trig=";a", wordtrig=false, snippetType="autosnippet"},
     {
         t("\\alpha"),
     },
     {condition = in_mathzone}),
-    s({trig=";b", snippetType="autosnippet"},
+    s({trig=";b", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\beta"),
     },
     {condition = in_mathzone}),
-    s({trig=";g", snippetType="autosnippet"},
+    s({trig=";g",  wordtrig=false,snippetType="autosnippet"},
     {
       t("\\gamma"),
     },
     {condition = in_mathzone}),
-    s({trig=";G", snippetType="autosnippet"},
+    s({trig=";G", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\Gamma"),
     },
     {condition = in_mathzone}),
-    s({trig=";d", snippetType="autosnippet"},
+    s({trig=";d", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\delta"),
     },
     {condition = in_mathzone}),
-    s({trig=";D", snippetType="autosnippet"},
+    s({trig=";D", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\Delta"),
     },
     {condition = in_mathzone}),
-    s({trig=";e", snippetType="autosnippet"},
+    s({trig=";e", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\epsilon"),
     },
     {condition = in_mathzone}),
-    s({trig=";z", snippetType="autosnippet"},
+    s({trig=";z", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\zeta"),
     },
     {condition = in_mathzone}),
-    s({trig=";h", snippetType="autosnippet"},
+    s({trig=";h", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\eta"),
     },
     {condition = in_mathzone}),
-    s({trig=";o", snippetType="autosnippet"},
+    s({trig=";o", wordtrig=false, snippetType="autosnippet"},
     {
       t("\\theta"),
     },
