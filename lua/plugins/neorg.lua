@@ -1,8 +1,10 @@
+-- Here you define your own workspaces (is not included in the repo)
+local w = require('utils.neorg-workspaces')
+
 return {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
-    ft = "norg",
     config = function()
         require("neorg").setup {
             load = {
@@ -10,9 +12,7 @@ return {
                 ["core.concealer"] = {},
                 ["core.dirman"] = {
                     config = {
-                        workspaces = {
-                            notes = "~/notes",
-                        },
+                        workspaces = w,
                         default_workspace = "notes",
                     },
                 },
