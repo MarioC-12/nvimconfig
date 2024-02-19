@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Autocorrector
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-  pattern = { '*.tex', '*.md' },
+  pattern = { '*.tex', '*.md', '*.norg' },
   command = 'setlocal spell'
 })
 
