@@ -6,7 +6,7 @@ vim.keymap.set('n', ',w', ":w<cr>", { silent = false })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Space>n', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set({ 'n', 'v' }, 'k', "v:count == 0 ? 'gk' : 'k'",
@@ -87,10 +87,10 @@ local CompileRun = function()
     vim.cmd.write()
 
     if vim.bo.filetype == 'c' then
-        vim.cmd("!clang -g -Wall % -o %<")
+        vim.cmd("!clang -g -Wall % -o %<.out")
     end
     if vim.bo.filetype == 'cpp' then
-        vim.cmd("!clang++ -g -fstandalone-debug -Wall % -o %<")
+        vim.cmd("!clang++ -g -fstandalone-debug -Wall % -o %<.out")
     end
     if vim.bo.filetype == 'rust' then
         vim.cmd("!cargo build")

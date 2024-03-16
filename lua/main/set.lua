@@ -77,18 +77,24 @@ vim.o.nobackup = true
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank({timeout = 40})
-  end,
-  group = highlight_group,
-  pattern = '*',
+    callback = function()
+        vim.highlight.on_yank({ timeout = 40 })
+    end,
+    group = highlight_group,
+    pattern = '*',
 })
 
 -- Autocorrector
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-  pattern = { '*.tex', '*.md', '*.norg' },
-  command = 'setlocal spell'
+    pattern = { '*.tex', '*.md', '*.norg' },
+    command = 'setlocal spell'
 })
 
 -- Trailiing whitespaces
- vim.fn.matchadd('errorMsg', [[\s\+$]])
+vim.fn.matchadd('errorMsg', [[\s\+$]])
+
+-- Detect CUP files
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+    pattern = '*.cup',
+    command = 'set filetype=cup'
+})
