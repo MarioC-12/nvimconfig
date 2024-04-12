@@ -1,5 +1,6 @@
 /plugin
 after/plugin/theme.lua
+after/plugin/themes/*
 lua/utils/neor-workspaces.lua
 lazy-lock.json
 
