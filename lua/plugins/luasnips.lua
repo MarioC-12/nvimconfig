@@ -21,6 +21,8 @@ local luasnip_opts = function()
     require("luasnip.loaders.from_lua")
             .lazy_load({ paths = {"~/.config/nvim/LuaSnip/", workspace_specific} })
     require("luasnip.loaders.from_vscode").lazy_load()
+
+    luasnip.filetype_extend("markdown", {"markdown", "tex"})
 end
 
 return {

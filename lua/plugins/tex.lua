@@ -19,7 +19,7 @@ return {
         dependencies = {
             "micangl/cmp-vimtex",
         },
-        ft = "tex",
+        ft = {"tex", "markdown"},
     },
     {
         "KeitaNakamura/tex-conceal.vim",
