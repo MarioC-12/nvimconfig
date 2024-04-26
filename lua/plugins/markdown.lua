@@ -12,7 +12,7 @@ return {
         config = markdown_opts,
     },
     {
-        "vim-pandoc/vim-pandoc-syntax",
+        "preservim/vim-markdown",
         ft = { "markdown" },
     }
 }

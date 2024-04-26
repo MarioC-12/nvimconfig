@@ -73,6 +73,10 @@ vim.o.foldlevel = 0
 vim.o.noswapfile = true
 vim.o.nobackup = true
 
+-- Syntax
+vim.cmd("syntax enable")
+vim.cmd("filetype plugin indent on")
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
