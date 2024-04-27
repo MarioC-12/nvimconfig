@@ -32,6 +32,7 @@ local telescope_keys = {
     { '<leader>sw', function() require('telescope.builtin').grep_string() end, desc = '[S]earch current [W]ord' },
     { '<leader>sg', function() require('telescope.builtin').live_grep() end, desc = '[S]earch by [G]rep' },
     { '<leader>sd', function() require('telescope.builtin').diagnostics() end, desc = '[S]earch [D]iagnostics' },
+    { '<leader>sp', function() require('telescope.builtin').resume() end, desc = '[S]earch [P]revious' },
 }
 
 return {
