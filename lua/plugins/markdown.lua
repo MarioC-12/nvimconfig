@@ -1,6 +1,7 @@
 local markdown_opts = function ()
     vim.g.mkdp_auto_start = 1
     vim.g.vim_markdown_math = 1
+    vim.keymap.set('n', '<leader>ll', ':MarkdownPreviewToggle<cr>', { silent = true })
 end
 
 return {
