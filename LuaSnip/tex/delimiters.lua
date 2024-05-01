@@ -106,6 +106,17 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="lrb", snippetType="autosnippet", wordTrig=false, dscr="Double square bracket"},
+        fmta(
+            [[ 
+            \llbracket <> \rrbracket
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     -- MATRIXES
     s({trig="pmat", snippetType="autosnippet", wordTrig=false, dscr="Parenthesis matrix"},
         fmta(
