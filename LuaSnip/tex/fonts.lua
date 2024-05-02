@@ -106,6 +106,17 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="mtt", snippetType="autosnippet", dscr="Math monospace"},
+        fmta(
+            [[ 
+            \mathtt{<>}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="tt", snippetType="autosnippet", dscr="Normal text"},
         fmta(
             [[ 

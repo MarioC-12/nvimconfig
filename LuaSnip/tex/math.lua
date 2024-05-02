@@ -50,6 +50,10 @@ return
         {t("\\rightarrow")},
         {condition = in_mathzone}
     ),
+    s({trig="hook", snippetType="autosnippet", dscr="Partial to"},
+        {t("\\hookrightarrow")},
+        {condition = in_mathzone}
+    ),
     s({trig="!>", snippetType="autosnippet", dscr="Map"},
         {t("\\mapsto")},
         {condition = in_mathzone}
