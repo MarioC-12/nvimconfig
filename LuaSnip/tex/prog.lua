@@ -34,7 +34,7 @@ return
     s({trig="scomp", snippetType="autosnippet", dscr="Statement composition"},
         fmta(
             [[ 
-            <>\ \mathtt{;}\ <>
+            <>\ \mathtt{;}\ <>\
             ]],
             {
                 i(1, "S_1"),
