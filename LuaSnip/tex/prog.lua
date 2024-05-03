@@ -25,8 +25,8 @@ return
             ]],
             {
                 i(1, "b"),
-                i(2, "S1"),
-                i(3, "S2"),
+                i(2, "S_1"),
+                i(3, "S_2"),
             }
         ),
         {condition = in_mathzone}
@@ -37,8 +37,8 @@ return
             <>\ \mathtt{;}\ <>
             ]],
             {
-                i(1, "S1"),
-                i(2, "S2"),
+                i(1, "S_1"),
+                i(2, "S_2"),
             }
         ),
         {condition = in_mathzone}
