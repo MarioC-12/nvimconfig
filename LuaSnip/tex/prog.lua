@@ -68,7 +68,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="BB", snippetType="autosnippet", dscr="Booleans semantic"},
+    s({trig="SB", snippetType="autosnippet", dscr="Booleans semantic"},
         fmta(
             [[ 
             \mathcal{B}\llbracket <> \rrbracket
