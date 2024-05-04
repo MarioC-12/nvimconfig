@@ -68,6 +68,29 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="svar", snippetType="autosnippet", dscr="Repeat loop"},
+        fmta(
+            [[ 
+            \mathtt{var}\ <>\ D_V
+            ]],
+            {
+                i(1, "x := a;"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="sproc", snippetType="autosnippet", dscr="Repeat loop"},
+        fmta(
+            [[ 
+            \mathtt{proc}\ <>\ \mathtt{is}\ <>; D_P
+            ]],
+            {
+                i(1, "p"),
+                i(2, "S"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="SB", snippetType="autosnippet", dscr="Booleans semantic"},
         fmta(
             [[ 
