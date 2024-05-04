@@ -79,18 +79,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="BB", snippetType="autosnippet", dscr="Booleans semantic"},
-        fmta(
-            [[ 
-            \mathcal{B}\llbracket <> \rrbracket
-            ]],
-            {
-                d(1, get_visual),
-            }
-        ),
-        {condition = in_mathzone}
-    ),
-    s({trig="AA", snippetType="autosnippet", dscr="Aritmetics semantic"},
+    s({trig="SA", snippetType="autosnippet", dscr="Aritmetics semantic"},
         fmta(
             [[ 
             \mathcal{A}\llbracket <> \rrbracket
