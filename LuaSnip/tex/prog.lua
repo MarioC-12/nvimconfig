@@ -113,4 +113,17 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="senvp", snippetType="autosnippet", dscr="Repeat loop"},
+        fmta(
+            [[ 
+            env_P \vdash \langle <>, <> \rangle \rightarrow <> 
+            ]],
+            {
+                i(1, "S"),
+                i(2, "s"),
+                i(3, "s'"),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
 }
