@@ -90,6 +90,10 @@ return
         {t("\\triangleleft")},
         {condition = in_mathzone}
     ),
+    s({trig="triag", snippetType="autosnippet", dscr="Triangle right"},
+        {t("\\triangleright")},
+        {condition = in_mathzone}
+    ),
     s({trig=">>", snippetType="autosnippet", dscr="Much greater"},
         {t("\\gg")},
         {condition = in_mathzone}
