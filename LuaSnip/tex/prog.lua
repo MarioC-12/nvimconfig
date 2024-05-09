@@ -113,6 +113,18 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="Ss", snippetType="autosnippet", dscr="Semantic function"},
+        fmta(
+            [[ 
+            \mathcal{S}_{\mathrm{<>}}\llbracket <> \rrbracket
+            ]],
+            {
+                i(1),
+                d(2, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="senvp", snippetType="autosnippet", dscr="Repeat loop"},
         fmta(
             [[ 
