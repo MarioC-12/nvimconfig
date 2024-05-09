@@ -56,7 +56,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="srep", snippetType="autosnippet", dscr="Repeat loop"},
+    s({trig="sfrep", snippetType="autosnippet", dscr="Repeat loop"},
         fmta(
             [[ 
             \mathtt{repeat}\ <>\ \mathtt{until}\ <>
