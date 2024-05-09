@@ -70,7 +70,11 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 --vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- Quickly open the config
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim<CR><cmd>cd %<cr>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim<CR><cmd>cd %<cr>")
+
+-- Search selected text
+vim.keymap.set('v', '<leader>/', [[y/\V<C-R>=escape(@", '\\/')<CR><CR>]], {noremap = true, silent = true})
+
 
 -- Create workspace specific snippets
 local create_or_goto_plugins = function ()
