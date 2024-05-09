@@ -120,7 +120,7 @@ return
         ),
         {condition = in_mathzone}
     ),
-    s({trig="tt", snippetType="autosnippet", dscr="Normal text"},
+    s({trig="tte", snippetType="autosnippet", dscr="Normal text"},
         fmta(
             [[ 
             \text{<>}
