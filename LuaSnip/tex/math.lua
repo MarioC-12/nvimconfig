@@ -18,6 +18,10 @@ return
         {t("\\subset")},
         {condition = in_mathzone}
     ),
+    s({trig="sC", snippetType="autosnippet", dscr="Square subseteq"},
+        {t("\\sqsubseteq")},
+        {condition = in_mathzone}
+    ),
     s({trig="Nn", snippetType="autosnippet", dscr="Cap"},
         {t("\\cap")},
         {condition = in_mathzone}
