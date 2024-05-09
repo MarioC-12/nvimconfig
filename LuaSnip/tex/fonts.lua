@@ -3,6 +3,9 @@ local get_visual = helpers.get_visual
 local in_mathzone = function()
     return vim.fn['vimtex#syntax#in_mathzone']() == 1
 end
+local not_in_mathzone = function()
+    return vim.fn['vimtex#syntax#in_mathzone']() == 0
+end
 
 return
 {
@@ -15,7 +18,7 @@ return
                 d(1, get_visual),
             }
         ),
-        {}
+        {condition = not_in_mathzone}
     ),
     s({trig="ita", snippetType="autosnippet", dscr="Italic font"},
         fmta(
@@ -26,7 +29,7 @@ return
                 d(1, get_visual),
             }
         ),
-        {}
+        {condition = not_in_mathzone}
     ),
     s({trig="und", snippetType="autosnippet", dscr="Underline font"},
         fmta(
@@ -37,7 +40,7 @@ return
                 d(1, get_visual),
             }
         ),
-        {}
+        {condition = not_in_mathzone}
     ),
     -- MATH MODE Fonts
     s({trig="mbb", snippetType="autosnippet", dscr="Math blackboard bold"},
