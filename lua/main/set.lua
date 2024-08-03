@@ -70,8 +70,8 @@ vim.o.foldlevel = 0
 
 -- No backup (use git)
 -- vim.o.nowb = true
-vim.o.noswapfile = true
-vim.o.nobackup = true
+vim.o.swapfile = false
+vim.o.backup = false
 
 -- Syntax
 vim.cmd("syntax enable")
