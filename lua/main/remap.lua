@@ -102,6 +102,9 @@ local CompileRun = function()
     if vim.bo.filetype == 'haskell' then
         vim.cmd("!ghc -o %< %")
     end
+    if vim.bo.filetype == 'markdown' then
+        vim.cmd("!pandoc % -o %<.pdf")
+    end
 end
 vim.keymap.set('n', '<F5>', CompileRun)
 
