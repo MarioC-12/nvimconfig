@@ -105,6 +105,9 @@ local CompileRun = function()
     if vim.bo.filetype == 'markdown' then
         vim.cmd("!pandoc % -o %<.pdf")
     end
+    if vim.bo.filetype == 'python' then
+        vim.cmd("!python %")
+    end
 end
 vim.keymap.set('n', '<F5>', CompileRun)
 
