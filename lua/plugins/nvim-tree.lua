@@ -7,6 +7,13 @@ local tree_opts = function ()
     })
 end
 
+vim.api.nvim_create_autocmd("BufRead", {
+    pattern = "*.pdf",
+    callback = function()
+        vim.ui.open(vim.fn.expand("%"))
+    end
+})
+
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
