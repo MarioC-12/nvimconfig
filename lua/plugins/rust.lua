@@ -38,11 +38,21 @@ return {
         "rust-lang/rust.vim",
         ft = "rust",
     },
+    -- {
+    --     "simrat39/rust-tools.nvim",
+    --     config = function ()
+    --         require("rust-tools").setup(opts)
+    --     end,
+    --     ft = "rust",
+    -- },
     {
-        "simrat39/rust-tools.nvim",
-        config = function ()
-            require("rust-tools").setup(opts)
-        end,
+        -- Automatically sets up LSP, so lsp.lua doesn't include rust.
+        -- Makes debugging work seamlessly.
+        "mrcjkb/rustaceanvim",
+        version = '^5', -- Recommended by module.
         ft = "rust",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+        },
     },
 }

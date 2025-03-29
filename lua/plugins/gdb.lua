@@ -1,5 +1,5 @@
 --Debuggers
 return {
-    "sakhnik/nvim-gdb",
-    ft = { "c", "cpp", "rust", "python", "sh" }
+--     "sakhnik/nvim-gdb",
+--     ft = { "c", "cpp", "rust", "python", "sh" }
 }
