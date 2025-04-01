@@ -8,19 +8,26 @@ return {
                 function() require("dap").toggle_breakpoint() end,
                 desc = "Toggle Breakpoint"
             },
-
             {
-                "<leader>dc",
+                "<F5>",
                 function() require("dap").continue() end,
                 desc = "Continue"
             },
-
+            {
+                "<F11>",
+                function() require("dap").step_into() end,
+                desc = "Continue"
+            },
+            {
+                "<F10>",
+                function() require("dap").step_over() end,
+                desc = "Continue"
+            },
             {
                 "<leader>dC",
                 function() require("dap").run_to_cursor() end,
                 desc = "Run to Cursor"
             },
-
             {
                 "<leader>dT",
                 function() require("dap").terminate() end,
@@ -75,8 +82,6 @@ return {
         },
         dependencies = {
             "jay-babu/mason-nvim-dap.nvim",
-            "leoluz/nvim-dap-go",
-            "mfussenegger/nvim-dap-python",
             "nvim-neotest/nvim-nio",
             "theHamsta/nvim-dap-virtual-text",
         },

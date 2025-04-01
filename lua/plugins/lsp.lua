@@ -18,6 +18,7 @@ local lsp_opts = function()
             }
         )
     vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end
 
 local mason_opts = function()

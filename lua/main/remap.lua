@@ -33,10 +33,10 @@ vim.keymap.set('n', '<leader>k', ":bnext<cr>", {})
 vim.keymap.set('n', '<leader>h', ":bd!", {})
 
 -- Manage tabs
-vim.keymap.set('n', '<leader>tn', ":tabnew<cr>", {})
+vim.keymap.set('n', '<leader>t<leader>', ":tabnew<cr>", {})
 vim.keymap.set('n', '<leader>to', ":tabonly<cr>", {})
 vim.keymap.set('n', '<leader>tc', ":tabclose<cr>", {})
-vim.keymap.set('n', '<leader>t<leader>', ":tabnext<cr>", {})
+vim.keymap.set('n', '<leader>tn', ":tabnext<cr>", {})
 vim.keymap.set('n', '<leader>tm', ":tabclose", {})
 
 -- Move highlights
@@ -86,47 +86,49 @@ local create_or_goto_plugins = function ()
 end
 vim.keymap.set("n", "<leader>gp", create_or_goto_plugins)
 
--- Compile with F5
-local CompileRun = function()
-    vim.cmd.write()
 
-    if vim.bo.filetype == 'c' then
-        vim.cmd("!clang -g -Wall % -o %<.out")
-    end
-    if vim.bo.filetype == 'cpp' then
-        vim.cmd("!clang++ -g -fstandalone-debug -Wall % -o %<.out")
-    end
-    if vim.bo.filetype == 'rust' then
-        vim.cmd("!cargo build")
-    end
-    if vim.bo.filetype == 'haskell' then
-        vim.cmd("!ghc -o %< %")
-    end
-    if vim.bo.filetype == 'markdown' then
-        vim.cmd("!pandoc % -o %<.pdf")
-    end
-    if vim.bo.filetype == 'python' then
-        vim.cmd("!python %")
-    end
-end
-vim.keymap.set('n', '<F5>', CompileRun)
-
--- Compile with make
-local CompileRunMake = function()
-    vim.cmd.write()
-
-    if vim.bo.filetype == 'c' or vim.bo.filetype == 'cpp' then
-        vim.cmd("!make")
-    end
-end
-vim.keymap.set('n', '<F6>', CompileRunMake)
-
--- Execute
-local Execute = function()
-    vim.cmd.write()
-
-    if vim.bo.filetype == 'rust' then
-        vim.cmd("!cargo run")
-    end
-end
-vim.keymap.set('n', '<F10>', Execute)
+-- TODO: Fix 
+-- -- Compile with F5
+-- local CompileRun = function()
+--     vim.cmd.write()
+--
+--     if vim.bo.filetype == 'c' then
+--         vim.cmd("!clang -g -Wall % -o %<.out")
+--     end
+--     if vim.bo.filetype == 'cpp' then
+--         vim.cmd("!clang++ -g -fstandalone-debug -Wall % -o %<.out")
+--     end
+--     -- if vim.bo.filetype == 'rust' then
+--     --     vim.cmd("!cargo build")
+--     -- end
+--     if vim.bo.filetype == 'haskell' then
+--         vim.cmd("!ghc -o %< %")
+--     end
+--     if vim.bo.filetype == 'markdown' then
+--         vim.cmd("!pandoc % -o %<.pdf")
+--     end
+--     if vim.bo.filetype == 'python' then
+--         vim.cmd("!python %")
+--     end
+-- end
+-- -- vim.keymap.set('n', '<F5>', CompileRun)
+--
+-- -- Compile with make
+-- local CompileRunMake = function()
+--     vim.cmd.write()
+--
+--     if vim.bo.filetype == 'c' or vim.bo.filetype == 'cpp' then
+--         vim.cmd("!make")
+--     end
+-- end
+-- -- vim.keymap.set('n', '<F6>', CompileRunMake)
+--
+-- -- Execute
+-- local Execute = function()
+--     vim.cmd.write()
+--
+--     -- if vim.bo.filetype == 'rust' then
+--     --     vim.cmd("!cargo run")
+--     -- end
+-- end
+-- -- vim.keymap.set('n', '<F10>', Execute)
