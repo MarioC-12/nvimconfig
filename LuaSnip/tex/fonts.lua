@@ -31,7 +31,7 @@ return
         ),
         {condition = not_in_mathzone}
     ),
-    s({trig="unde", snippetType="autosnippet", dscr="Underline font"},
+    s({trig="unde_", snippetType="autosnippet", dscr="Underline font"},
         fmta(
             [[ 
             \underline{<>}
