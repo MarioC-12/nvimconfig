@@ -31,6 +31,17 @@ return
         ),
         {condition = not_in_mathzone}
     ),
+    s({trig="ttnorm", snippetType="autosnippet", dscr="Normal font"},
+        fmta(
+            [[ 
+            \textnormal{<>}
+            ]],
+            {
+                d(1, get_visual),
+            }
+        ),
+        {condition = not_in_mathzone}
+    ),
     s({trig="unde_", snippetType="autosnippet", dscr="Underline font"},
         fmta(
             [[ 
@@ -154,6 +165,10 @@ return
     ),
     s({trig="RR", snippetType="autosnippet", dscr="Reals"},
         {t("\\mathbb{R}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="FF2", snippetType="autosnippet", dscr="Field 2"},
+        {t("\\mathbb{F}_2")},
         {condition = in_mathzone}
     ),
     s({trig="CC", snippetType="autosnippet", dscr="Complex"},

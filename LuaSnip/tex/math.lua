@@ -262,6 +262,18 @@ return
         ),
         {condition = in_mathzone}
     ),
+    s({trig="SUm", snippetType="autosnippet", dscr="Summation no top"},
+        fmta(
+            [[ 
+            \sum_{<>} <> 
+            ]],
+            {
+                i(1, "i=1"),
+                d(2, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="prod", snippetType="autosnippet", dscr="Product"},
         fmta(
             [[ 
@@ -271,6 +283,18 @@ return
                 i(1, "i=1"),
                 i(2, "\\infty"),
                 d(3, get_visual),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
+    s({trig="PRod", snippetType="autosnippet", dscr="Product no top"},
+        fmta(
+            [[ 
+            \prod_{<>} <> 
+            ]],
+            {
+                i(1, "i=1"),
+                d(2, get_visual),
             }
         ),
         {condition = in_mathzone}

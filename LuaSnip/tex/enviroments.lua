@@ -163,12 +163,13 @@ return
     s({trig="def", dscr="Definition"},
         fmta(
             [[ 
-            \begin{defi}[<>]
+            \begin{definition}[<>]\label{def:<>}
                 <>
-            \end{defi}
+            \end{definition}
             ]],
             {
                 i(1),
+                i(3),
                 d(2, get_visual),
             }
         ),
@@ -177,12 +178,13 @@ return
     s({trig="prop", dscr="Proposition"},
         fmta(
             [[ 
-            \begin{prop}[<>]
+            \begin{proposition}[<>]\label{prop:<>}
                 <>
-            \end{prop}
+            \end{proposition}
             ]],
             {
                 i(1),
+                i(3),
                 d(2, get_visual),
             }
         ),
@@ -191,12 +193,13 @@ return
     s({trig="th", dscr="Theorem"},
         fmta(
             [[ 
-            \begin{theo}[<>]
+            \begin{theorem}[<>]\label{th<>}
                 <>
-            \end{theo}
+            \end{theorem}
             ]],
             {
                 i(1),
+                i(3),
                 d(2, get_visual),
             }
         ),
@@ -205,9 +208,9 @@ return
     s({trig="dem", dscr="Proof"},
         fmta(
             [[ 
-            \begin{demo}
+            \begin{proof}
                 <>
-            \end{demo}
+            \end{proof}
             ]],
             {
                 d(1, get_visual),
@@ -246,12 +249,13 @@ return
     s({trig="obs", dscr="Observation"},
         fmta(
             [[ 
-            \begin{obs}[<>]
+            \begin{remark}[<>]\label{obs:<>}
                 <>
-            \end{obs}
+            \end{remark}
             ]],
             {
                 i(1),
+                i(3),
                 d(2, get_visual),
             }
         ),
@@ -260,9 +264,9 @@ return
     s({trig="ej", dscr="Example"},
         fmta(
             [[ 
-            \begin{ej}
+            \begin{instance}
                 <>
-            \end{ej}
+            \end{instance}
             ]],
             {
                 d(1, get_visual),
