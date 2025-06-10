@@ -169,8 +169,8 @@ return
             ]],
             {
                 i(1),
-                i(3),
-                d(2, get_visual),
+                i(2),
+                d(3, get_visual),
             }
         ),
         {condition = line_begin}
@@ -184,8 +184,8 @@ return
             ]],
             {
                 i(1),
-                i(3),
-                d(2, get_visual),
+                i(2),
+                d(3, get_visual),
             }
         ),
         {condition = line_begin}
@@ -193,14 +193,14 @@ return
     s({trig="th", dscr="Theorem"},
         fmta(
             [[ 
-            \begin{theorem}[<>]\label{th<>}
+            \begin{theorem}[<>]\label{th:<>}
                 <>
             \end{theorem}
             ]],
             {
                 i(1),
-                i(3),
-                d(2, get_visual),
+                i(2),
+                d(3, get_visual),
             }
         ),
         {condition = line_begin}
@@ -255,8 +255,8 @@ return
             ]],
             {
                 i(1),
-                i(3),
-                d(2, get_visual),
+                i(2),
+                d(3, get_visual),
             }
         ),
         {condition = line_begin}

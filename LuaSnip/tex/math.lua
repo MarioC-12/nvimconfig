@@ -170,6 +170,26 @@ return
         {t("\\ldots")},
         {condition = in_mathzone}
     ),
+    s({trig="hamc", snippetType="autosnippet", dscr="Hamming cube"},
+        {t("\\{-1, 1\\}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="rhocor", snippetType="autosnippet", dscr="Rho correlated"},
+        {t("\\substack{\\left(\\x, \\y \\right) \\\\ \\rho\\text{-correlacionados}}")},
+        {condition = in_mathzone}
+    ),
+    s({trig="majd", snippetType="autosnippet", dscr="Majority depth"},
+        fmta(
+            [[ 
+            \mathrm{Maj}_n^{\otimes <>}<>
+            ]],
+            {
+                i(1, "d"),
+                i(2),
+            }
+        ),
+        {condition = in_mathzone}
+    ),
     s({trig="nnn", snippetType="autosnippet", dscr="Big cap"},
         fmta(
             [[ 
