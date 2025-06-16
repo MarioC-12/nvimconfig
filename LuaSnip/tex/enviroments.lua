@@ -235,9 +235,9 @@ return
     s({trig="cor", dscr="Corollary"},
         fmta(
             [[ 
-            \begin{coro}[<>]
+            \begin{corollary}[<>]
                 <>
-            \end{coro}
+            \end{corollary}
             ]],
             {
                 i(1),
