@@ -87,6 +87,21 @@ return
         ),
         {condition = line_begin}
     ),
+    s({trig="fram", snippetType="autosnippet", dscr="Beamer Frame"},
+        fmta(
+            [[ 
+            \begin{frame}
+                \frametitle{<>}
+                <>
+            \end{frame}
+            ]],
+            {
+                d(1, get_visual),
+                i(2),
+            }
+        ),
+        {condition = line_begin}
+    ),
     s({trig="eqnn", dscr="Equation without a number"},
         fmta(
             [[ 
